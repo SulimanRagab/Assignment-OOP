@@ -56,3 +56,15 @@ using OOP_Assignment;
 // وكذالك لو حوّلت public Weight ل  private Weight و بستخدام Property اقردر اعملله فاليديشن بحيث احدد  حدث بناءً على   الوزن 
 #endregion
 #endregion
+
+//Part 02 : Practical
+#region Question 1
+DeliveryAddress deliv = new DeliveryAddress("cairo", "street01", 1444440);
+Console.WriteLine(deliv.GetFullAddress);
+
+#region جزء النسخ
+//Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that
+//the original did not change.
+// تم حل ا لسؤال فوق 
+#endregion
+#endregion
