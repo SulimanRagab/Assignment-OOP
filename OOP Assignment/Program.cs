@@ -42,3 +42,17 @@ using OOP_Assignment;
 #endregion
 #endregion
 
+#region Question 2
+#region First Requirement
+//a) a) Identify at least three problems with this design from an encapsulation perspective.
+//The first problem : مفيش اي حمايه للبينات  اي حد يقدر يوصل للبينات ويعدل عليها علشان هيا public مش private
+//The second problem : مفيش اي validation للبينات يعني ممكن حد يدخل بيانات غلط ومفيش اي حمايه من كده
+//The third proble : ممكن اي حد غير قيم  DeliveryFee و Weight لقيم غير منطقيه ودا طبعا مش مقبول لأان  مفيش Validation للبيانات.
+#endregion
+
+#region The second requirement
+//b) b) How can private fields and public properties improve this design?
+//لو حوّلت public DeliveryFee ل  private DeliveryFee محدش يقدر يغير ف رسوم التوصيل  وتكون للقراء فقط للعرض ب استخدام Property Read Only
+// وكذالك لو حوّلت public Weight ل  private Weight و بستخدام Property اقردر اعملله فاليديشن بحيث احدد  حدث بناءً على   الوزن 
+#endregion
+#endregion
