@@ -1,5 +1,6 @@
 ﻿
 //Part 01 : Theoretical Questions
+
 #region Question 1
 using OOP_Assignment;
 #region First Requirement
@@ -59,8 +60,8 @@ using OOP_Assignment;
 
 //Part 02 : Practical
 #region Question 1
-DeliveryAddress deliv = new DeliveryAddress("cairo", "street01", 1444440);
-Console.WriteLine(deliv.GetFullAddress);
+//DeliveryAddress deliv = new DeliveryAddress("cairo", "street01", 1);
+//Console.WriteLine(deliv.GetFullAddress());
 
 #region جزء النسخ
 //Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that
@@ -68,3 +69,20 @@ Console.WriteLine(deliv.GetFullAddress);
 // تم حل ا لسؤال فوق 
 #endregion
 #endregion
+// قبل تحويل نوع properties ل read-only 
+Shipment shipment =new Shipment();
+shipment.TrackingCode = "A1001";
+shipment.Description = "Lap Top";
+shipment.TrackingCode = "   ";
+shipment.Description = "";
+shipment.Weight = 100;
+shipment.Weight = -3;
+shipment.Destination = new DeliveryAddress("Cairo", "Street 01", 1);
+shipment.DeliveryFee = 30;
+shipment.DeliveryFee = -2;
+Console.WriteLine($"TrackingCode: {shipment.TrackingCode}");
+Console.WriteLine($"Description: {shipment.Description}");
+Console.WriteLine($"Weight: {shipment.Weight}");
+Console.WriteLine($"DeliveryFee:{shipment.DeliveryFee}");
+Console.WriteLine($"Destination: {shipment.Destination.GetFullAddress()}");
+Console.WriteLine($"EstimatedCost:{shipment.EstimatedCost}");

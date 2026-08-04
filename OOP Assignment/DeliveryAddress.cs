@@ -16,8 +16,11 @@ namespace OOP_Assignment
             Street = street;
             BuildingNumber = buildingNumber;
         }
-        public string GetFullAddress
-         => $"City: {City} Street: {Street} BuildingNumber: {BuildingNumber}";
+        public string GetFullAddress()
+        { 
+           return $"City: {City} Street: {Street} BuildingNumber: {BuildingNumber}";
+        }
+         
         
     }
 }
