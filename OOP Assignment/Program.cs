@@ -3,6 +3,7 @@
 
 #region Question 1
 using OOP_Assignment;
+using System.Reflection.Metadata.Ecma335;
 #region First Requirement
 
 //a)What happens when a DeliveryAddress variable is copied into another variable and the copy is modified?
@@ -69,20 +70,60 @@ using OOP_Assignment;
 // تم حل ا لسؤال فوق 
 #endregion
 #endregion
+
+#region Question 2
+#region 2.Ceate a Shipment struct
 // قبل تحويل نوع properties ل read-only 
-Shipment shipment =new Shipment();
-shipment.TrackingCode = "A1001";
-shipment.Description = "Lap Top";
-shipment.TrackingCode = "   ";
-shipment.Description = "";
-shipment.Weight = 100;
-shipment.Weight = -3;
-shipment.Destination = new DeliveryAddress("Cairo", "Street 01", 1);
-shipment.DeliveryFee = 30;
-shipment.DeliveryFee = -2;
-Console.WriteLine($"TrackingCode: {shipment.TrackingCode}");
-Console.WriteLine($"Description: {shipment.Description}");
-Console.WriteLine($"Weight: {shipment.Weight}");
-Console.WriteLine($"DeliveryFee:{shipment.DeliveryFee}");
-Console.WriteLine($"Destination: {shipment.Destination.GetFullAddress()}");
-Console.WriteLine($"EstimatedCost:{shipment.EstimatedCost}");
+//Shipment shipment =new Shipment();
+//shipment.TrackingCode = "A1001";
+//shipment.Description = "Lap Top";
+//shipment.TrackingCode = "   ";
+//shipment.Description = "";
+//shipment.Weight = 100;
+//shipment.Weight = -3;
+//shipment.Destination = new DeliveryAddress("Cairo", "Street 01", 1);
+//shipment.DeliveryFee = 30;
+//shipment.DeliveryFee = -2;
+//Console.WriteLine($"TrackingCode: {shipment.TrackingCode}");
+//Console.WriteLine($"Description: {shipment.Description}");
+//Console.WriteLine($"Weight: {shipment.Weight}");
+//Console.WriteLine($"DeliveryFee:{shipment.DeliveryFee}");
+//Console.WriteLine($"Destination: {shipment.Destination.GetFullAddress()}");
+//Console.WriteLine($"EstimatedCost:{shipment.EstimatedCost}");
+
+
+// قبل انشاء ميثود ال DisplayShipmentInfo()
+//Console.WriteLine(" The Firest constructor");
+//Shipment shipment01 = new Shipment("aaa001");
+//Console.WriteLine($"TrackingCode: {shipment01.TrackingCode}");
+//Console.WriteLine($"Description: {shipment01.Description}");
+//Console.WriteLine($"Weight: {shipment01.Weight}");
+//Console.WriteLine($"DeliveryFee:{shipment01.DeliveryFee}");
+//Console.WriteLine($"Destination: {shipment01.Destination.GetFullAddress()}");
+//Console.WriteLine($"EstimatedCost:{shipment01.EstimatedCost}");
+//Console.WriteLine("---------------------------------------------------");
+//Console.WriteLine(" The second constructor");
+//Shipment shipment02 = new Shipment("aaa002","Kepord", 55.5 , 30, new DeliveryAddress("cairo", "Street02", 20));
+//Console.WriteLine($"TrackingCode: {shipment02.TrackingCode}");
+//Console.WriteLine($"Description: {shipment02.Description}");
+//Console.WriteLine($"Weight: {shipment02.Weight}");
+//Console.WriteLine($"DeliveryFee:{shipment02.DeliveryFee}");
+//Console.WriteLine($"Destination: {shipment02.Destination.GetFullAddress()}");
+//Console.WriteLine($"EstimatedCost:{shipment02.EstimatedCost}");
+
+//Console.WriteLine(" The Firest constructor");
+//Shipment shipment01 = new Shipment("aaa001");
+//shipment01.PrintShipment();
+//Console.WriteLine("---------------------------------------------------");
+//Console.WriteLine(" The second constructor");
+//Shipment shipment02 = new Shipment("aaa002", "Kepord", 55.5, 30, new DeliveryAddress("cairo", "Street02", 20));
+//shipment02.UpdateDeliveryFee(50);
+//shipment02.UpdateDeliveryFee(-50);
+//shipment02.PrintShipment();
+
+#endregion
+#endregion
+
+
+
+
