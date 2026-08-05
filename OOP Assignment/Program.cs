@@ -125,5 +125,39 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 
 
+#region Question 3
+#region 5. Create a DeliveryCenter struct
+// الكود اثناء انشاء 5. Create a DeliveryCenter struct
+// اختبار الكود بعد انشاء 5. Create a DeliveryCenter struct
+//Shipment shimp01 = new Shipment("aaa01", "Kepord", 65.5, 50, new DeliveryAddress("cairo", "Street03", 3540));
+//Shipment shimp02 = new Shipment("aaa02", "LApTop", 5.5, 10, new DeliveryAddress("cairo", "Street03", 330));
+//Shipment shimp03 = new Shipment("aaa03", "HedPhon", 10.5, 20, new DeliveryAddress("cairo", "Street03", 23405));
+//Shipment shimp04 = new Shipment("aaa04", "Mause", 35.5, 40, new DeliveryAddress("Giza", "Street03", 3540));
+//Shipment shimp05 = new Shipment("aaa05", "RUM", 45.5,60, new DeliveryAddress("Naser city", "Street022", 450));
+//Shipment shimp06 = new Shipment("aaa06", "MausPad", 85.5, 67, new DeliveryAddress("BNS", "Street06", 1030));
+//Shipment shimp07 = new Shipment("aaa07", "Power", 65.5, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//Shipment shimp08 = new Shipment("aaa08", "شاشه", 65.5, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//Shipment shimp09 = new Shipment("aaa09", "اي حاجه", 65.5, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//Shipment shimp10 = new Shipment("aaa10", "Ay7aga", 65.5, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//DliveryCenter dliveryCenter = new DliveryCenter();
+//dliveryCenter.AddShipment(shimp01);
+//dliveryCenter.AddShipment(shimp02);
+//dliveryCenter.AddShipment(shimp03);
+//dliveryCenter.AddShipment(shimp04);
+//dliveryCenter.AddShipment(shimp05);
+//dliveryCenter.AddShipment(shimp06);
+//dliveryCenter.AddShipment(shimp07);
+//dliveryCenter.AddShipment(shimp08);
+//dliveryCenter.AddShipment(shimp09);
+//dliveryCenter.AddShipment(shimp10);
+//dliveryCenter[0].PrintShipment();
+//dliveryCenter[0] = new Shipment("aaa011", "111", 11.1, 11, new DeliveryAddress("cairo", "Street11", 1111));
+//Console.WriteLine("__________________________");
+//dliveryCenter[0].PrintShipment();
+//dliveryCenter["aaa02"].PrintShipment();
+//dliveryCenter["aaa02"] = new Shipment("aaa022", "222", 22.2, 22, new DeliveryAddress("cairo", "Street22", 2222));
+//Console.WriteLine(dliveryCenter[5].TrackingCode);
 
+#endregion
+#endregion
 
