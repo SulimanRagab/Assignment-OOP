@@ -1,5 +1,4 @@
-﻿
-//Part 01 : Theoretical Questions
+﻿//Part 01 : Theoretical Questions
 
 #region Question 1
 using OOP_Assignment;
@@ -124,7 +123,6 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 #endregion
 
-
 #region Question 3
 #region 5. Create a DeliveryCenter struct
 // الكود اثناء انشاء 5. Create a DeliveryCenter struct
@@ -160,4 +158,48 @@ using System.Reflection.Metadata.Ecma335;
 
 #endregion
 #endregion
+
+#region Question 4
+#region 6. In Main, build a Console Application that does the following
+//DliveryCenter Center = new DliveryCenter();
+//for (int i = 1; i <= 3; i++)
+//{
+//Console.Write("Enter TrackingCode: ");
+//string trackingCode = Console.ReadLine();
+//Console.Write("Enter Description: ");
+//string description = Console.ReadLine();
+//Console.Write("Enter Weight: ");
+//double.TryParse(Console.ReadLine(), out double weight);
+//Console.Write("Enter DeliveryFee:");
+//double.TryParse(Console.ReadLine(), out double deliveryFee);
+//Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//Console.WriteLine("Enter the shipment delivery address.");
+//Console.Write("Enter the City Name: ");
+//string City = Console.ReadLine();
+//Console.Write("Enter the Street Name: ");
+//string street = Console.ReadLine();
+//Console.Write("Enter the BuildingNumber Name: ");
+//int.TryParse(Console.ReadLine(), out int buildingNumber);
+//Console.WriteLine("____ All Shipments Data ____");
+//Shipment shipment = new Shipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
+//Center.AddShipment(shipment);
+//}
+//Center[0].PrintShipment();
+//Center[1].PrintShipment();
+//Center[2].PrintShipment();
+//Console.WriteLine("Enter a trackingCode to search");
+//string trac = Console.ReadLine();
+//Shipment stringindex = Center[trac];
+//if (!string.IsNullOrWhiteSpace(stringindex.TrackingCode))
+//{
+//  Center[trac].PrintShipment();  
+//}
+//else
+//{
+//   Console.WriteLine("Shipment not found."); 
+//}
+#endregion
+#endregion
+
+
 

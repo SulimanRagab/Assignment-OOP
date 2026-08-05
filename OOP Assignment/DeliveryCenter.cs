@@ -40,7 +40,7 @@ namespace OOP_Assignment
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(trackingcode))
+                if (!string.IsNullOrWhiteSpace(trackingcode))
                     for (int i = 0; i < Shipments.Length; i++)
                         if (trackingcode == Shipments[i].TrackingCode)
                             return Shipments[i];
@@ -48,7 +48,7 @@ namespace OOP_Assignment
             }
             set
             {
-                if (trackingcode is not null)
+                if (!string.IsNullOrWhiteSpace(trackingcode))
                     for (int i = 0; i < Shipments.Length; i++)
                         if (trackingcode == Shipments[i].TrackingCode)
                         {

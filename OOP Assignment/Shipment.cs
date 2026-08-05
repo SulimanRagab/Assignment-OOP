@@ -95,10 +95,11 @@ namespace OOP_Assignment
         {
             Console.WriteLine($"TrackingCode: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight}");
-            Console.WriteLine($"DeliveryFee: {DeliveryFee}");
+            Console.WriteLine($"Weight: {Weight} KG");
+            Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine($"EstimatedCost: {EstimatedCost}");
+            Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
+            Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
         }
 
         
