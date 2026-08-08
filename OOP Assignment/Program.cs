@@ -222,4 +222,13 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 #endregion
 
-
+#region Question 2
+// a) Which class is the parent class?
+//Shipment
+//b) Which class is the child class?
+// ExpressShipment
+//c) What members are inherited by ExpressShipment?
+// trackingCode
+//d) Why is inheritance better than duplicating the same code in multiple classes?
+//لأن الوراثة inheritance بتقلل تكرار الكود  وبالتالي بتخللي الكود اسهل ف القراءه والتعديل 
+#endregion
