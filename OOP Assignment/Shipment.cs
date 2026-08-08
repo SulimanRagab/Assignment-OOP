@@ -99,7 +99,7 @@ namespace OOP_Assignment
             Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
-            Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+            Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
 
         

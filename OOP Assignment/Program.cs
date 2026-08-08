@@ -201,5 +201,25 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 #endregion
 
+// Continuing from the second session
+
+
+// Part 01 : Theoretical Questions
+#region Question 1
+#region a)
+// a) What is the difference between a class and a struct?
+//Class reference type , بينما  Struct value type
+// calss بيتخزن ف heap و struct بيتخزن ف stack
+// class  مدعوم بالوراثه inheritance و انما  struct لا يدعم الوراثه
+//class للبينات الكثيره و المعقدة  و انما struct للبينات البسيطه و القليله
+// class معندوش constructor افتراضي و انما struct عندو constructor افتراضي
+#endregion
+
+#region b)
+//b) Why are classes more suitable than structs for large applications?
+//لأن ال Class  بتدعم الوراثة inheritance  ف دي ميزه انك بتقلل تكرار الكود بينما ال struct لا تدعم الوراثة inheritance  و بالتالي لو عندك كود متكرر هتضطر تكتبه اكتر من مره و ده هيخلي الكود كبير و معقد و صعب التعديل عليه
+// وكمان ال class ما بتضرش تاخد نسخه من القيمه اللي بتساويها فالمقابل  وبالتالي ما فيش مشاكل في ال memory  و ال performance  زي ال struct اللي بتاخد نسخه من القيمه اللي بتساويها و ده بيخلي ال memory  و ال performance  يتاثروا سلبيا
+#endregion
+#endregion
 
 
