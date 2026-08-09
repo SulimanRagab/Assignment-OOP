@@ -232,3 +232,9 @@ using System.Reflection.Metadata.Ecma335;
 //d) Why is inheritance better than duplicating the same code in multiple classes?
 //لأن الوراثة inheritance بتقلل تكرار الكود  وبالتالي بتخللي الكود اسهل ف القراءه والتعديل 
 #endregion
+
+
+// Part 02 : Practical
+#region Questions 1
+
+#endregion

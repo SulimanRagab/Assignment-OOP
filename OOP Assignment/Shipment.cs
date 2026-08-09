@@ -4,14 +4,18 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal struct Shipment
+    internal class Shipment
     {
+        #region fields
         private string trackingCode;
         private string description;
-        private double weight;
-        private double deliveryFee;
+        private decimal weight;
+        private decimal deliveryFee;
         public DeliveryAddress Destination { get; set; }
-        public string TrackingCode
+        #endregion
+
+        #region properties
+public string TrackingCode
         {
             get { return trackingCode; }
             private set 
@@ -36,7 +40,7 @@ namespace OOP_Assignment
             }
         }
 
-        public double Weight
+        public decimal Weight
         {
             get { return weight;}
             set
@@ -47,7 +51,7 @@ namespace OOP_Assignment
                 }
             }
         }
-        public double DeliveryFee
+        public decimal DeliveryFee
         {
             get { return deliveryFee; }
             private set
@@ -59,7 +63,7 @@ namespace OOP_Assignment
             }
         }
    
-        public double EstimatedCost
+        public virtual decimal EstimatedCost
         {
             get
             {
@@ -67,6 +71,13 @@ namespace OOP_Assignment
             }
         }
 
+        #endregion
+
+        #region Constructors
+        public Shipment()
+        {
+            
+        }
         public Shipment(string trackingCode)
         {
             TrackingCode = trackingCode;
@@ -75,7 +86,7 @@ namespace OOP_Assignment
             DeliveryFee = 50;
             Destination = Destination;
         }
-        public Shipment(string trackingCode, string description,double weight,double deliveryFee, DeliveryAddress destination)
+        public Shipment(string trackingCode, string description,decimal weight,decimal deliveryFee, DeliveryAddress destination)
         {
             TrackingCode = trackingCode;
             Description = description;
@@ -84,11 +95,18 @@ namespace OOP_Assignment
             Destination = destination;
         }
 
+        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee) : this(trackingCode)
+        {
+        }
+
+        #endregion
+
+        #region Methods
         public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)
             {
-                DeliveryFee = (double)newFee;
+                DeliveryFee = newFee;
             }
         }
         public void PrintShipment()
@@ -102,6 +120,7 @@ namespace OOP_Assignment
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
 
-        
+        #endregion
+
     }
 }

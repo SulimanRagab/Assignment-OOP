@@ -4,27 +4,32 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal struct DliveryCenter
+    internal class DliveryCenter
     {
-        private Shipment[] Shipments;
+        #region fields
+         private Shipment[] Shipments;
+        #endregion 
 
+        #region Constructors
         public DliveryCenter()
         {
-            Shipments = new Shipment[10];
+            Shipments = new Shipment[20];
         }
+        #endregion
 
+        #region Indexers
         public Shipment this[int index]
         {
             get
             {
-               if (index >= 0 && index < 10)
+               if (index >= 0 && index < Shipments.Length)
                return Shipments[index];
                 return new Shipment();
                
             }
             set 
             {
-                if (index >= 0 && index < 10)
+                if (index >= 0 && index < Shipments.Length)
                 {
                     Shipments[index] = value;
                 }
@@ -57,8 +62,10 @@ namespace OOP_Assignment
                         }
             }
         }
+        #endregion
 
-        public void AddShipment(Shipment shipment)
+        #region Methods
+     public void AddShipment(Shipment shipment)
         {
           for (int i = 0; i< Shipments.Length; i++)
             {
@@ -69,6 +76,8 @@ namespace OOP_Assignment
                 }
             }         
         }
+        #endregion
+   
     }
     
 }
