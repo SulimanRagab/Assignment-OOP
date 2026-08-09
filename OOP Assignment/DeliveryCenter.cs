@@ -8,7 +8,8 @@ namespace OOP_Assignment
     {
         #region fields
          private Shipment[] Shipments;
-        #endregion 
+        private string CenterName;
+        #endregion
 
         #region Constructors
         public DliveryCenter()
@@ -47,7 +48,7 @@ namespace OOP_Assignment
             {
                 if (!string.IsNullOrWhiteSpace(trackingcode))
                     for (int i = 0; i < Shipments.Length; i++)
-                        if (trackingcode == Shipments[i].TrackingCode)
+                        if (Shipments[i] != null && trackingcode == Shipments[i].TrackingCode)
                             return Shipments[i];
                          return new Shipment();
             }
@@ -69,15 +70,27 @@ namespace OOP_Assignment
         {
           for (int i = 0; i< Shipments.Length; i++)
             {
-                if (Shipments[i].TrackingCode == null)
+                if (Shipments[i] == null)
                 {
                     Shipments[i] = shipment;
                     break;
                 }
             }         
         }
+        public bool RemoveShipment(string trackingCode)
+        {
+            for (int i = 0; i < Shipments.Length; i++)
+            {
+                if (Shipments[i] != null && Shipments[i].TrackingCode == trackingCode)
+                {
+                    Shipments[i] = null;
+                    return true;
+                }
+            }
+            return false;
+        }
         #endregion
-   
+
     }
     
 }
