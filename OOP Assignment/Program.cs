@@ -154,10 +154,11 @@ dliveryCenter.AddShipment(shimp10);
 //dliveryCenter[0].PrintShipment();
 //dliveryCenter["aaa02"].PrintShipment();
 //dliveryCenter["aaa02"] = new Shipment("aaa022", "222", 222, 22, new DeliveryAddress("cairo", "Street22", 2222));
-dliveryCenter.RemoveShipment("aaa03");
-dliveryCenter["aaa03"].PrintShipment();
-dliveryCenter.AddShipment(shimp03);
-dliveryCenter["aaa03"].PrintShipment();
+//dliveryCenter.RemoveShipment("aaa03");
+//dliveryCenter["aaa03"].PrintShipment();
+//dliveryCenter.AddShipment(shimp03);
+//dliveryCenter["aaa03"].PrintShipment();
+dliveryCenter.PrintAllShipments();
 
 #endregion
 #endregion

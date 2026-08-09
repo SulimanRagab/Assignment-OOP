@@ -89,6 +89,19 @@ namespace OOP_Assignment
             }
             return false;
         }
+
+        public void PrintAllShipments()
+        {
+            for (int i = 0; i < Shipments.Length; i++)
+            {
+                if(Shipments[i] != null)
+                {
+                 Shipments[i].PrintShipment(); 
+                }
+              
+            }
+         
+        }
         #endregion
 
     }
