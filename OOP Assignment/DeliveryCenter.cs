@@ -8,7 +8,7 @@ namespace OOP_Assignment
     {
         #region fields
          private Shipment[] Shipments;
-        private string CenterName;
+        public string CenterName;
         #endregion
 
         #region Constructors
@@ -96,6 +96,8 @@ namespace OOP_Assignment
             {
                 if(Shipments[i] != null)
                 {
+                   Console.WriteLine($"Dlivery Center: {CenterName}");
+                    Console.WriteLine(" ");
                  Shipments[i].PrintShipment(); 
                 }
               

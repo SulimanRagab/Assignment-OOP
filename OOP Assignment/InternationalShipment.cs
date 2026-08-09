@@ -46,6 +46,19 @@ namespace OOP_Assignment
             DestinationCountry = destinationCountry;
             CustomsFee = customsFee;
         }
+
+        public override void PrintShipment()
+        {
+            Console.WriteLine($"TrackingCode: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight} KG");
+            Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");         
+            Console.WriteLine($"Destination Country: {destinationCountry}");
+            Console.WriteLine($"CustomsFee: {customsFee} EGP");
+            Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+            Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
+        }
     }
 }
 

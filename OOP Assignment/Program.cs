@@ -2,6 +2,7 @@
 
 #region Question 1
 using OOP_Assignment;
+using System.Diagnostics.Metrics;
 using System.Reflection.Metadata.Ecma335;
 #region First Requirement
 
@@ -127,38 +128,38 @@ using System.Reflection.Metadata.Ecma335;
 #region 5. Create a DeliveryCenter struct
 // الكود اثناء انشاء 5. Create a DeliveryCenter struct
 // اختبار الكود بعد انشاء 5. Create a DeliveryCenter struct
-Shipment shimp01 = new Shipment("aaa01", "Kepord", 21, 50, new DeliveryAddress("cairo", "Street03", 3540));
-Shipment shimp02 = new Shipment("aaa02", "LApTop", 55, 10, new DeliveryAddress("cairo", "Street03", 330));
-Shipment shimp03 = new Shipment("aaa03", "HedPhon", 105, 20, new DeliveryAddress("cairo", "Street03", 23405));
-Shipment shimp04 = new Shipment("aaa04", "Mause", 355, 40, new DeliveryAddress("Giza", "Street03", 3540));
-Shipment shimp05 = new Shipment("aaa05", "RUM", 455, 60, new DeliveryAddress("Naser city", "Street022", 450));
-Shipment shimp06 = new Shipment("aaa06", "MausPad", 855, 67, new DeliveryAddress("BNS", "Street06", 1030));
-Shipment shimp07 = new Shipment("aaa07", "Power", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
-Shipment shimp08 = new Shipment("aaa08", "شاشه", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
-Shipment shimp09 = new Shipment("aaa09", "اي حاجه", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
-Shipment shimp10 = new Shipment("aaa10", "Ay7aga", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
-DliveryCenter dliveryCenter = new DliveryCenter();
-dliveryCenter.AddShipment(shimp01);
-dliveryCenter.AddShipment(shimp02);
-dliveryCenter.AddShipment(shimp03);
-dliveryCenter.AddShipment(shimp04);
-dliveryCenter.AddShipment(shimp05);
-dliveryCenter.AddShipment(shimp06);
-dliveryCenter.AddShipment(shimp07);
-dliveryCenter.AddShipment(shimp08);
-dliveryCenter.AddShipment(shimp09);
-dliveryCenter.AddShipment(shimp10);
-//dliveryCenter[0].PrintShipment();
-//dliveryCenter[0] = new Shipment("aaa011", "111", 111, 11, new DeliveryAddress("cairo", "Street11", 1111));
-//Console.WriteLine("__________________________");
-//dliveryCenter[0].PrintShipment();
-//dliveryCenter["aaa02"].PrintShipment();
-//dliveryCenter["aaa02"] = new Shipment("aaa022", "222", 222, 22, new DeliveryAddress("cairo", "Street22", 2222));
-//dliveryCenter.RemoveShipment("aaa03");
-//dliveryCenter["aaa03"].PrintShipment();
+//Shipment shimp01 = new Shipment("aaa01", "Kepord", 21, 50, new DeliveryAddress("cairo", "Street03", 3540));
+//Shipment shimp02 = new Shipment("aaa02", "LApTop", 55, 10, new DeliveryAddress("cairo", "Street03", 330));
+//Shipment shimp03 = new Shipment("aaa03", "HedPhon", 105, 20, new DeliveryAddress("cairo", "Street03", 23405));
+//Shipment shimp04 = new Shipment("aaa04", "Mause", 355, 40, new DeliveryAddress("Giza", "Street03", 3540));
+//Shipment shimp05 = new Shipment("aaa05", "RUM", 455, 60, new DeliveryAddress("Naser city", "Street022", 450));
+//Shipment shimp06 = new Shipment("aaa06", "MausPad", 855, 67, new DeliveryAddress("BNS", "Street06", 1030));
+//Shipment shimp07 = new Shipment("aaa07", "Power", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//Shipment shimp08 = new Shipment("aaa08", "شاشه", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//Shipment shimp09 = new Shipment("aaa09", "اي حاجه", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//Shipment shimp10 = new Shipment("aaa10", "Ay7aga", 655, 70, new DeliveryAddress("SUR", "Street05", 3220));
+//DliveryCenter dliveryCenter = new DliveryCenter();
+//dliveryCenter.AddShipment(shimp01);
+//dliveryCenter.AddShipment(shimp02);
 //dliveryCenter.AddShipment(shimp03);
-//dliveryCenter["aaa03"].PrintShipment();
-dliveryCenter.PrintAllShipments();
+//dliveryCenter.AddShipment(shimp04);
+//dliveryCenter.AddShipment(shimp05);
+//dliveryCenter.AddShipment(shimp06);
+//dliveryCenter.AddShipment(shimp07);
+//dliveryCenter.AddShipment(shimp08);
+//dliveryCenter.AddShipment(shimp09);
+//dliveryCenter.AddShipment(shimp10);
+////dliveryCenter[0].PrintShipment();
+////dliveryCenter[0] = new Shipment("aaa011", "111", 111, 11, new DeliveryAddress("cairo", "Street11", 1111));
+////Console.WriteLine("__________________________");
+////dliveryCenter[0].PrintShipment();
+////dliveryCenter["aaa02"].PrintShipment();
+////dliveryCenter["aaa02"] = new Shipment("aaa022", "222", 222, 22, new DeliveryAddress("cairo", "Street22", 2222));
+////dliveryCenter.RemoveShipment("aaa03");
+////dliveryCenter["aaa03"].PrintShipment();
+////dliveryCenter.AddShipment(shimp03);
+////dliveryCenter["aaa03"].PrintShipment();
+//dliveryCenter.PrintAllShipments();
 
 #endregion
 #endregion
@@ -238,6 +239,235 @@ dliveryCenter.PrintAllShipments();
 
 
 // Part 02 : Practical
-#region Questions 1
+#region 5.In Main
+#region The logical and best approach for the current code.
 
+//Console.WriteLine("Enter the shipment type: \n 1. StandardShipment \n 2. ExpressShipment \n 3. InternationalShipment");
+//int shipmentType = int.Parse(Console.ReadLine());
+//if (shipmentType == 1)
+//{
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+//    StandardShipment Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
+//}
+//else if (shipmentType == 2)
+//{
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.Write("Enter ExtraFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal extraFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+
+//    ExpressShipment Express = new ExpressShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), extraFee);
+//}
+//else if (shipmentType == 3)
+//{
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.Write("Enter Destination country: ");
+//    string destinationCountry = Console.ReadLine();
+
+//    Console.Write("Enter CustomsFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal customsFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+
+//    InternationalShipment International = new InternationalShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), destinationCountry, customsFee);
+//}
+#endregion
+
+//DliveryCenter Center = new DliveryCenter();
+//Console.Write("Enter Center Name: ");
+//Center.CenterName = Console.ReadLine();
+#region Standard Shipment
+//{
+//    Console.WriteLine("Enter Standard Shipment Data\r\n");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+//    StandardShipment Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
+
+//    Center.AddShipment(Standard);
+    
+//}
+
+#endregion
+
+#region Express Shipment
+//{
+//    Console.WriteLine("- - - - - - - - -  Express Shipment - - - - - - - - - - ");
+//    Console.WriteLine("Enter Express Shipment Data");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.Write("Enter ExtraFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal extraFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+
+//    ExpressShipment Express = new ExpressShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), extraFee);
+
+//    Center.AddShipment(Express);
+//}
+
+#endregion
+
+#region International Shipment
+//{
+//    Console.WriteLine("- - - - - - - - -  International Shipment - - - - - - - - - - ");
+//    Console.WriteLine("Enter International Shipment Data");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.Write("Enter Destination country: ");
+//    string destinationCountry = Console.ReadLine();
+
+//    Console.Write("Enter CustomsFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal customsFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+
+//    InternationalShipment International = new InternationalShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), destinationCountry, customsFee);
+
+//    Center.AddShipment(International);
+//}
+#endregion
+//Center.PrintAllShipments();
+//Console.WriteLine("       ");
+//Console.WriteLine("---------- Search ----------");
+//Console.WriteLine("       ");
+//Console.WriteLine("Enter a trackingCode to search");
+//string trac = Console.ReadLine();
+//Shipment stringindex = Center[trac];
+//if (!string.IsNullOrWhiteSpace(stringindex.TrackingCode))
+//{
+//    Center[trac].PrintShipment();
+//}
+//else
+//{
+//    Console.ForegroundColor = ConsoleColor.Red;
+//    Console.WriteLine("Shipment not found");
+//    Console.ResetColor();
+//}
+//Console.WriteLine("       ");
+//Console.WriteLine("---------- Delete shipment ----------");
+//Console.WriteLine("       ");
+//Console.WriteLine("Enter the tracking number for the shipment you want to delete");
+//string trackingCodeToDelete = Console.ReadLine();
+//bool remov = Center.RemoveShipment(trackingCodeToDelete);
+//if (remov)
+//{
+//   Console.ForegroundColor = ConsoleColor.Green;
+//   Console.WriteLine("The shipment has been successfully deleted");
+//    Console.ForegroundColor = ConsoleColor.White;
+//}
+//else
+//{
+//    Console.ForegroundColor = ConsoleColor.Red;
+//    Console.WriteLine("Shipment not found");
+//    Console.ForegroundColor = ConsoleColor.White;
+//}
+//Center.PrintAllShipments();
 #endregion
