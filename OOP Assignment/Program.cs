@@ -358,7 +358,7 @@ using System.Reflection.Metadata.Ecma335;
 //    StandardShipment Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
 
 //    Center.AddShipment(Standard);
-    
+
 //}
 
 #endregion
@@ -471,3 +471,6 @@ using System.Reflection.Metadata.Ecma335;
 //}
 //Center.PrintAllShipments();
 #endregion
+
+// ASSIGNMENT 03
+//Part 01 — Theoretical Questions
