@@ -474,3 +474,13 @@ using System.Reflection.Metadata.Ecma335;
 
 // ASSIGNMENT 03
 //Part 01 — Theoretical Questions
+#region Q1 Overloading, Overriding, and Binding
+//a) What is the difference between Method Overloading and Method Overriding?
+// ال Method Overloading بتسمح بتكرار نفس الميثود اكثر من مره بنفس الاسم ولكن بمعاملات مختلفه Parameters مختلفه
+// وال Method Overriding بتسمح للشيلد كلاس استخدام نفس الميثود اللي عند الأب بنفس ال Parameters والتغيير عليها حسب نوع الشيلد كلاس
+
+//b) What is the difference between Static Binding and Dynamic Binding?
+// ال Static Binding بيتم تحديد الميثود اللي هتتنفذ وقت الكومبايل Compile time و دا بيحصل مع ال Method Overloading اللي هيا مثلا new()
+// وال Dynamic Binding بيتم تحديد الميثود اللي هتتنفذ وقت التشغيل Run time و دا بيحصل مع ال Method Overriding زي virtual() و override()
+#endregion
+
