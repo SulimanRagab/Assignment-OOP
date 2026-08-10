@@ -484,3 +484,13 @@ using System.Reflection.Metadata.Ecma335;
 // وال Dynamic Binding بيتم تحديد الميثود اللي هتتنفذ وقت التشغيل Run time و دا بيحصل مع ال Method Overriding زي virtual() و override()
 #endregion
 
+#region Q2 Sealed Classes and Methods
+//a) What is the purpose of the sealed keyword when applied to a class?
+// انا لما ب استخدم sealed class  على اي كلاس ف انا بمنع اي كلاس تانيه انها تورث منها 
+//b) What is the difference between a sealed class and a sealed method?
+//sealed class تمنع توريث ال كلاس اللي مستخدماها لأي كلاس تانيه 
+// اما ال sealed method بتمنع اي Child class انها تستخدم ال ميثود اللي مستخدماها عن طريق ال override() ولكن عادي جدا انها تعمل new() للكلاس  وعادي جدا  انها تنشئ اوبجيكت جديد هيا فقط بتمنع الميثود ان يتعملها override() ف اي Child class 
+//c) Can a sealed method be overridden? Why?
+// الاجابه : لأمينفعش اعمل override() ثل ميثود معمول لها sealed لأن ببساطه ال sealed method لما بستخدمها على ميثود ف انا بقولها اخرك هنا مفيش اي Child Class تعمللك override() تاني  
+#endregion
+
