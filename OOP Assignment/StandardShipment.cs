@@ -10,5 +10,12 @@ namespace OOP_Assignment
         {
 
         }
+        public override decimal EstimatedCost
+        {
+            get
+            {
+                return DeliveryFee + (Weight * 5);
+            }
+        }
     }
 }

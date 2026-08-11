@@ -109,6 +109,25 @@ public string TrackingCode
                 DeliveryFee = newFee;
             }
         }
+        public void weightupdate(decimal newWeight)
+        {
+            if (newWeight > 0)
+            {
+                Weight = newWeight;
+                // انا استخدمت Weight بتاع ال بروبرتي علشان استخدم الفاليديشن 
+            }
+        }
+        // MEthod Overloding
+        public void weightupdate(decimal newWeight ,decimal packingWeight)
+        {
+            if (newWeight > 0 && packingWeight > 0)
+            {
+                Weight = newWeight + packingWeight;
+                
+            }
+        }
+
+
         public virtual void PrintShipment()
         {
             Console.WriteLine($"TrackingCode: {TrackingCode}");

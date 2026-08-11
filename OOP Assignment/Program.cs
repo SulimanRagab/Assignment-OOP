@@ -494,3 +494,9 @@ using System.Reflection.Metadata.Ecma335;
 // الاجابه : لأمينفعش اعمل override() ثل ميثود معمول لها sealed لأن ببساطه ال sealed method لما بستخدمها على ميثود ف انا بقولها اخرك هنا مفيش اي Child Class تعمللك override() تاني  
 #endregion
 
+
+//Part 02 — Practical
+#region Q 01
+
+#endregion
+
