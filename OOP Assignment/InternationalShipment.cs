@@ -59,6 +59,10 @@ namespace OOP_Assignment
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
+        public virtual void GenerateCustomsReport()
+        {
+            Console.WriteLine("GenerateCustomsReport virtual ");
+        }
     }
 }
 

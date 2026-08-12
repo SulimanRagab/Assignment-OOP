@@ -138,6 +138,10 @@ public string TrackingCode
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
+        public sealed void GenerateCustomsReport()
+        {
+
+        }
 
         #endregion
 
