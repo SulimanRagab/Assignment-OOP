@@ -130,6 +130,8 @@ public string TrackingCode
 
         public virtual void PrintShipment()
         {
+            Console.WriteLine($"Name Shipment: StandardShipment");
+            Console.WriteLine(" \n ");
             Console.WriteLine($"TrackingCode: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Weight: {Weight} KG");
@@ -138,7 +140,7 @@ public string TrackingCode
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
-        public sealed void GenerateCustomsReport()
+        public virtual void GenerateCustomsReport()
         {
 
         }

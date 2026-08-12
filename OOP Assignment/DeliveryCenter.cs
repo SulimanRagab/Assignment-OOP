@@ -103,7 +103,10 @@ namespace OOP_Assignment
             {
                 if(Shipments[i] != null)
                 {
-                   Console.WriteLine($"Dlivery Center: {CenterName}");
+                   Console.WriteLine($"====================\n Dlivery Center: {CenterName}\n ====================");
+                    Console.WriteLine(" ");
+                    Console.WriteLine($"Driver: {Driver.fullName}");
+                    Console.WriteLine("-------------------------------");
                     Console.WriteLine(" ");
                  Shipments[i].PrintShipment(); 
                 }

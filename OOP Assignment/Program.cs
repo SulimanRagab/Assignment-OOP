@@ -1,4 +1,6 @@
-﻿//Part 01 : Theoretical Questions
+﻿
+#region ASSIGNMENT 01
+//Part 01 : Theoretical Questions
 
 #region Question 1
 using OOP_Assignment;
@@ -205,9 +207,9 @@ using System.Reflection.Metadata.Ecma335;
 //}
 #endregion
 #endregion
+#endregion
 
-// Continuing from the second session
-
+#region ASSIGNMENT 02
 // Part 01 : Theoretical Questions
 #region Question 1
 #region a)
@@ -236,7 +238,6 @@ using System.Reflection.Metadata.Ecma335;
 //d) Why is inheritance better than duplicating the same code in multiple classes?
 //لأن الوراثة inheritance بتقلل تكرار الكود  وبالتالي بتخللي الكود اسهل ف القراءه والتعديل 
 #endregion
-
 
 // Part 02 : Practical
 #region 5.In Main
@@ -334,7 +335,7 @@ using System.Reflection.Metadata.Ecma335;
 //Center.CenterName = Console.ReadLine();
 #region Standard Shipment
 //{
-//    Console.WriteLine("Enter Standard Shipment Data\r\n");
+//    Console.WriteLine("Enter Standard Shipment Data\n");
 //    Console.Write("Enter TrackingCode: ");
 //    string trackingCode = Console.ReadLine();
 
@@ -434,6 +435,7 @@ using System.Reflection.Metadata.Ecma335;
 //    Center.AddShipment(International);
 //}
 #endregion
+
 //Center.PrintAllShipments();
 //Console.WriteLine("       ");
 //Console.WriteLine("---------- Search ----------");
@@ -459,8 +461,8 @@ using System.Reflection.Metadata.Ecma335;
 //bool remov = Center.RemoveShipment(trackingCodeToDelete);
 //if (remov)
 //{
-//   Console.ForegroundColor = ConsoleColor.Green;
-//   Console.WriteLine("The shipment has been successfully deleted");
+//    Console.ForegroundColor = ConsoleColor.Green;
+//    Console.WriteLine("The shipment has been successfully deleted");
 //    Console.ForegroundColor = ConsoleColor.White;
 //}
 //else
@@ -471,7 +473,9 @@ using System.Reflection.Metadata.Ecma335;
 //}
 //Center.PrintAllShipments();
 #endregion
+#endregion
 
+#region ASSIGNMENT 03
 // ASSIGNMENT 03
 //Part 01 — Theoretical Questions
 #region Q1 Overloading, Overriding, and Binding
@@ -494,9 +498,161 @@ using System.Reflection.Metadata.Ecma335;
 // الاجابه : لأمينفعش اعمل override() ثل ميثود معمول لها sealed لأن ببساطه ال sealed method لما بستخدمها على ميثود ف انا بقولها اخرك هنا مفيش اي Child Class تعمللك override() تاني  
 #endregion
 
-
 //Part 02 — Practical
-#region Q 01
+#region Q 10 Main() Checklist
+
+//DliveryCenter Center = new DliveryCenter();
+//Console.Write("Enter Center Name: ");
+//Center.CenterName = Console.ReadLine();
+//Console.WriteLine("Enter Name Driver");
+//string fullName = Console.ReadLine();
+//Driver driver = new Driver(1, fullName, "0123456789");
+//Center.Driver = driver;
+//StandardShipment Standard;
+//ExpressShipment Express;
+//InternationalShipment International;
+#region Standard Shipment
+//{
+//    Console.WriteLine("Enter Standard Shipment Data\n");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+//  Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
+//    Center.AddShipment(Standard);
+//    DeliveryHelper.PrintShipmentDetails(Standard);
+//    Console.WriteLine("Update shipment weight");
+//    decimal.TryParse(Console.ReadLine(), out decimal Weight);
+//    Standard.weightupdate(Weight);
+//    Console.WriteLine("Update the shipment weight after packing");
+//    Console.WriteLine("Enter Original Weight");
+//    decimal.TryParse(Console.ReadLine(), out decimal OriginalWeight);
+//    Console.WriteLine("Enter Weight  Packing");
+//    decimal.TryParse(Console.ReadLine(), out decimal WeightPacking);
+//    Standard.weightupdate(OriginalWeight, WeightPacking);
+//    Console.WriteLine("Shipment details after weight update");
+//    Console.ForegroundColor = ConsoleColor.Green;
+//    DeliveryHelper.PrintShipmentDetails(Standard);
+//    Console.ForegroundColor = ConsoleColor.White;
+//}
 
 #endregion
 
+#region Express Shipment
+//{
+//    Console.WriteLine("- - - - - - - - -  Express Shipment - - - - - - - - - - ");
+//    Console.WriteLine("Enter Express Shipment Data");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.Write("Enter ExtraFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal extraFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+//    Express = new ExpressShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), extraFee);
+//    Center.AddShipment(Express);
+//    DeliveryHelper.PrintShipmentDetails(Express);
+
+//}
+
+#endregion
+
+#region International Shipment
+
+//{
+//    Console.WriteLine("- - - - - - - - -  International Shipment - - - - - - - - - - ");
+//    Console.WriteLine("Enter International Shipment Data");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
+
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
+
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+//    Console.Write("Enter Destination country: ");
+//    string destinationCountry = Console.ReadLine();
+
+//    Console.Write("Enter CustomsFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal customsFee);
+
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+
+//   International = new InternationalShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), destinationCountry, customsFee);
+//    Center.AddShipment(International);
+//    DeliveryHelper.PrintShipmentDetails(International);
+//}
+#endregion
+//Console.ForegroundColor = ConsoleColor.DarkGreen;
+//Console.WriteLine(" \n ");
+//Console.WriteLine("Print all shipments using PrintAllShipments()");
+//Console.WriteLine(" \n ");
+//Console.WriteLine("===============================");
+//Center.PrintAllShipments();
+//Console.WriteLine("===============================");
+//Console.WriteLine("print shipment a foreach Loop \n  ");
+//Shipment[] shipments = { Standard, Express, International };
+//foreach (Shipment shipment in shipments)
+//{
+//    shipment.PrintShipment();
+//}
+
+//l. Demonstrate the sealed class and sealed method (comments or code).
+
+//   internal sealed class CompletedShipmen : Shipment
+//{
+// الكلاس دا مغلق يعني مفيش اي كلاس تانيه ترث منها 
+//}
+//internal  class testsealedClass : CompletedShipmen
+//{
+//    // error
+//}
+//public override void GenerateCustomsReport()
+//{
+//    // Error Not Ovveride
+//}
+#endregion
+#endregion

@@ -7,7 +7,6 @@ namespace OOP_Assignment
     internal class ExpressShipment : Shipment
     {
         private decimal extraFee;
-
         public decimal ExtraFee
         {
             get { return extraFee; }
@@ -33,6 +32,8 @@ namespace OOP_Assignment
 
         public override void PrintShipment()
         {
+            Console.WriteLine($"Name Shipment: ExpressShipment");
+            Console.WriteLine(" \n ");
             Console.WriteLine($"TrackingCode: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Weight: {Weight} KG");

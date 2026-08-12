@@ -6,8 +6,15 @@ namespace OOP_Assignment
 {
     internal class Driver
     {
-        public int DriverId;
-        public string FullName;
-        public string PhoneNumber;
+        public int driverId;
+        public string fullName;
+        public string phoneNumber;
+    
+       public Driver(int DriverId, string FullName, string PhoneNumber ) 
+       {
+            driverId = DriverId;
+            fullName = FullName;
+            phoneNumber = PhoneNumber;
+       }
     }
 }

@@ -8,7 +8,6 @@ namespace OOP_Assignment
     {
         private string destinationCountry;
         private decimal customsFee;
-
         public string DestinationCountry
         {
             get { return destinationCountry; }
@@ -49,6 +48,8 @@ namespace OOP_Assignment
 
         public override void PrintShipment()
         {
+            Console.WriteLine($"Name Shipment: InternationalShipment");
+            Console.WriteLine(" \n ");
             Console.WriteLine($"TrackingCode: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Weight: {Weight} KG");
