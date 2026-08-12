@@ -7,8 +7,9 @@ namespace OOP_Assignment
     internal class DliveryCenter
     {
         #region fields
-         private Shipment[] Shipments;
+        private Shipment[] Shipments;
         public string CenterName;
+        public Driver Driver;
         #endregion
 
         #region Constructors
@@ -92,6 +93,12 @@ namespace OOP_Assignment
 
         public void PrintAllShipments()
         {
+            // طباعة جميع الشحنات  عن طريق foreach حسب طلب الاسايمنت
+            //foreach (var shipment in Shipments) 
+            //{
+            //    shipment.PrintShipment();           
+            //}
+
             for (int i = 0; i < Shipments.Length; i++)
             {
                 if(Shipments[i] != null)
