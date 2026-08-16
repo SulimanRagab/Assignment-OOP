@@ -661,5 +661,13 @@ using System.Reflection.Metadata.Ecma335;
 #region ASSIGNMENT 04
 // Part 01 — Theoretical Questions
 
+#region Q01
 
+//a) What is Abstraction in Object-Oriented Programming?a) What is Abstraction in Object-Oriented Programming?
+//ال Abstraction هو ببساطه اخفاء التفاصيل الغير مهمه او المعقده للمستخدم و اظهار التفاصيل الل يحتاجها فقط 
+
+//b) Why is abstraction considered one of the four pillars of OOP?
+// لأن بيركز على اخفاء الكود المقعد والتفاصيل الكثيره ويوفر كود سهل القراءه و التعامل ودا بيسهل حل المشكلات فيما بعد وبيحمي اللبينات 
+
+#endregion
 #endregion
