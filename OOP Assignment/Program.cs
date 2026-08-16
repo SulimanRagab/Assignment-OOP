@@ -670,4 +670,18 @@ using System.Reflection.Metadata.Ecma335;
 // لأن بيركز على اخفاء الكود المقعد والتفاصيل الكثيره ويوفر كود سهل القراءه و التعامل ودا بيسهل حل المشكلات فيما بعد وبيحمي اللبينات 
 
 #endregion
+
+#region Q02
+//a) What is the difference between an Abstract Class and an Interface?
+// => Abstract Class = Base Class \\ بيمثل كلاس اساسي مشترك لباقي الكلاسات الوارثه منه و يقدر يحتوي على Fields و Properties
+// => Interface = Contract \\  بيحدد الكلاس هيعمل اي  يعني بيحدد سلوك الكلاس ممككن الكلاس ينفذ اكتر من Interface
+
+//b) When would you choose an Interface instead of an Abstract Class?
+// هختار Abstract Class لما يكون عندي  خاصيه و عايز اخلي اكتر من كلاس يستخدمها مثلا زي CRUD 
+// و هختار Interface لما اكون عايز اخلي كلاس ينفذ سلوك معين ويلتزم بيه  و اكون عايز ينفذ اكتر من سلوك خلاف ال Abstract Class 
+
+//c) Can a class inherit from multiple abstract classes? Can it implement multiple interfaces?
+// مينفعش ال Class تطبق اكتر من Abstract Class لان c # مش بتسمح بكدا و انما ينفع تطبق اكتر من Interface بمعنى تنفذ اكتر من سلوك مختلف 
+
+#endregion
 #endregion
