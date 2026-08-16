@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal class Shipment
+    internal abstract class Shipment
     {
         #region fields
         private string trackingCode;

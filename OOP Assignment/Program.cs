@@ -684,4 +684,8 @@ using System.Reflection.Metadata.Ecma335;
 // مينفعش ال Class تطبق اكتر من Abstract Class لان c # مش بتسمح بكدا و انما ينفع تطبق اكتر من Interface بمعنى تنفذ اكتر من سلوك مختلف 
 
 #endregion
+
+// Part 02 — Practical
+
+
 #endregion
