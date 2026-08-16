@@ -476,6 +476,7 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 
 #region ASSIGNMENT 03
+
 // ASSIGNMENT 03
 //Part 01 — Theoretical Questions
 #region Q1 Overloading, Overriding, and Binding
@@ -655,4 +656,10 @@ using System.Reflection.Metadata.Ecma335;
 //    // Error Not Ovveride
 //}
 #endregion
+#endregion
+
+#region ASSIGNMENT 04
+// Part 01 — Theoretical Questions
+
+
 #endregion
