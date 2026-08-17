@@ -687,10 +687,13 @@ using System.Reflection.Metadata.Ecma335;
 
 // Part 02 — Practical
 #region 8 Main() Checklist
-DliveryCenter Center = new DliveryCenter();
-StandardShipment Standard;
-ExpressShipment Express;
-InternationalShipment International;
+#region Create Oject
+//DliveryCenter Center = new DliveryCenter();
+//StandardShipment Standard;
+//ExpressShipment Express;
+//InternationalShipment International;
+#endregion
+
 #region Standard Shipment
 {
     Console.WriteLine("Enter Standard Shipment Data\n");
@@ -787,35 +790,38 @@ Center.AddShipment(Standard);}
 }
 #endregion
 
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("====================\n Dlivery Center \n ====================");
-Center.PrintAllShipments();
-ITrackable[] iTrackable =
-{
-    Standard,
-    Express,
-    International
-};
-Console.WriteLine("==========================================");
-Console.WriteLine("Tracking Status");
-foreach (var trackable in iTrackable)
-{
-    Console.WriteLine($"{trackable.GetTrackingStatus()}");
-}
-IInsurable[] iInsurable =
-{
-    Standard,
-    Express,
-    International
-};
-Console.WriteLine("==========================================");
-Console.WriteLine("Insurance");
+#region Output
+//Console.ForegroundColor = ConsoleColor.Green;
+//Console.WriteLine("====================\n Dlivery Center \n ====================");
+//Center.PrintAllShipments();
+//ITrackable[] iTrackable =
+//{
+//    Standard,
+//    Express,
+//    International
+//};
+//Console.WriteLine("==========================================");
+//Console.WriteLine("Tracking Status");
+//foreach (var trackable in iTrackable)
+//{
+//    Console.WriteLine($"{trackable.GetTrackingStatus()}");
+//}
+//IInsurable[] iInsurable =
+//{
+//    Standard,
+//    Express,
+//    International
+//};
+//Console.WriteLine("==========================================");
+//Console.WriteLine("Insurance");
 
-foreach (var Insurable in iInsurable)
-{
-    Console.WriteLine($"{Insurable.GetType().Name} Insurance: {Insurable.CalculateInsurance()} EGP\n ");
-}
-Console.WriteLine("==========================================");
-Console.WriteLine("Interface Polymorphism Demonstrated Successfully.");
+//foreach (var Insurable in iInsurable)
+//{
+//    Console.WriteLine($"{Insurable.GetType().Name} Insurance: {Insurable.CalculateInsurance()} EGP\n ");
+//}
+//Console.WriteLine("==========================================");
+//Console.WriteLine("Interface Polymorphism Demonstrated Successfully.");
+#endregion
+
 #endregion
 #endregion
