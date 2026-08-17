@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment , ITrackable, IInsurable
     {
         private decimal extraFee;
         public decimal ExtraFee
@@ -44,5 +44,14 @@ namespace OOP_Assignment
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
 
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode}  is Out for Delivery";
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.08m;
+        }
     }
 }

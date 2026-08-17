@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal class StandardShipment : Shipment
+    internal class StandardShipment : Shipment , ITrackable, IInsurable
     {
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination)
         {
@@ -16,6 +16,16 @@ namespace OOP_Assignment
             {
                 return DeliveryFee + (Weight * 5);
             }
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.05m ;
+        }
+
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Ready";
         }
 
         public override void PrintShipment()
