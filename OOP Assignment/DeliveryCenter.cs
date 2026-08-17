@@ -114,6 +114,14 @@ namespace OOP_Assignment
             }
          
         }
+        public void PrintTrackingStatuses()
+        {
+            foreach (ITrackable Shipment in Shipments)
+            {
+                Console.WriteLine(Shipment.GetTrackingStatus());
+            }
+        }
+
         #endregion
 
     }
