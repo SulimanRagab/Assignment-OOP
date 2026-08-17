@@ -63,13 +63,7 @@ public string TrackingCode
             }
         }
    
-        public virtual decimal EstimatedCost
-        {
-            get
-            {
-                return deliveryFee + (weight * 5);
-            }
-        }
+        public abstract decimal EstimatedCost{ get; }
 
         #endregion
 
@@ -128,18 +122,8 @@ public string TrackingCode
         }
 
 
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine($"Name Shipment: StandardShipment");
-            Console.WriteLine(" \n ");
-            Console.WriteLine($"TrackingCode: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} KG");
-            Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");
-            Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
-        }
+        public abstract void PrintShipment();
+        
         public virtual void GenerateCustomsReport()
         {
 

@@ -17,5 +17,20 @@ namespace OOP_Assignment
                 return DeliveryFee + (Weight * 5);
             }
         }
+
+        public override void PrintShipment()
+        {
+            {
+                Console.WriteLine($"Name Shipment: StandardShipment");
+                Console.WriteLine(" \n ");
+                Console.WriteLine($"TrackingCode: {TrackingCode}");
+                Console.WriteLine($"Description: {Description}");
+                Console.WriteLine($"Weight: {Weight} KG");
+                Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");
+                Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
+                Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+                Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
+            }
+        }
     }
 }
