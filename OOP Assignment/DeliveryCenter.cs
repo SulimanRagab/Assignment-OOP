@@ -20,50 +20,50 @@ namespace OOP_Assignment
         #endregion
 
         #region Indexers
-        public Shipment this[int index]
-        {
-            get
-            {
-               if (index >= 0 && index < Shipments.Length)
-               return Shipments[index];
-                return new Shipment();
+        //public Shipment this[int index]
+        //{
+        //    get
+        //    {
+        //       if (index >= 0 && index < Shipments.Length)
+        //       return Shipments[index];
+        //        return new Shipment();
                
-            }
-            set 
-            {
-                if (index >= 0 && index < Shipments.Length)
-                {
-                    Shipments[index] = value;
-                }
-                else
-                {
-                 new Shipment();
-                }
+        //    }
+        //    set 
+        //    {
+        //        if (index >= 0 && index < Shipments.Length)
+        //        {
+        //            Shipments[index] = value;
+        //        }
+        //        else
+        //        {
+        //            new Shipment();
+        //        }
                 
-            }
-        }
+        //    }
+        //}
 
-        public Shipment this[string trackingcode]
-        {
-            get
-            {
-                if (!string.IsNullOrWhiteSpace(trackingcode))
-                    for (int i = 0; i < Shipments.Length; i++)
-                        if (Shipments[i] != null && trackingcode == Shipments[i].TrackingCode)
-                            return Shipments[i];
-                         return new Shipment();
-            }
-            set
-            {
-                if (!string.IsNullOrWhiteSpace(trackingcode))
-                    for (int i = 0; i < Shipments.Length; i++)
-                        if (trackingcode == Shipments[i].TrackingCode)
-                        {
-                            Shipments[i] = value;
-                            break;
-                        }
-            }
-        }
+        //public Shipment this[string trackingcode]
+        //{
+        //    get
+        //    {
+        //        if (!string.IsNullOrWhiteSpace(trackingcode))
+        //            for (int i = 0; i < Shipments.Length; i++)
+        //                if (Shipments[i] != null && trackingcode == Shipments[i].TrackingCode)
+        //                    return Shipments[i];
+        //                 return new Shipment();
+        //    }
+        //    set
+        //    {
+        //        if (!string.IsNullOrWhiteSpace(trackingcode))
+        //            for (int i = 0; i < Shipments.Length; i++)
+        //                if (trackingcode == Shipments[i].TrackingCode)
+        //                {
+        //                    Shipments[i] = value;
+        //                    break;
+        //                }
+        //    }
+        //}
         #endregion
 
         #region Methods
@@ -103,11 +103,11 @@ namespace OOP_Assignment
             {
                 if(Shipments[i] != null)
                 {
-                   Console.WriteLine($"====================\n Dlivery Center: {CenterName}\n ====================");
-                    Console.WriteLine(" ");
-                    Console.WriteLine($"Driver: {Driver.fullName}");
-                    Console.WriteLine("-------------------------------");
-                    Console.WriteLine(" ");
+                   //Console.WriteLine("====================\n Dlivery Center \n ====================");
+                    //Console.WriteLine(" ");
+                    //Console.WriteLine($"Driver: {Driver.fullName}");
+                    //Console.WriteLine("-------------------------------");
+                    //Console.WriteLine(" ");
                  Shipments[i].PrintShipment(); 
                 }
               
@@ -118,8 +118,11 @@ namespace OOP_Assignment
         {
             foreach (ITrackable Shipment in Shipments)
             {
-                Console.WriteLine(Shipment.GetTrackingStatus());
-            }
+                if (Shipments != null)
+                {
+                    Console.WriteLine($"{Shipment.GetTrackingStatus()}\n ==========================================");
+                }
+                }
         }
 
         #endregion

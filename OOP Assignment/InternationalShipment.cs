@@ -6,28 +6,28 @@ namespace OOP_Assignment
 {
     internal class InternationalShipment : Shipment , ITrackable, IInsurable
     {
-        private string destinationCountry;
-        private decimal customsFee;
-        public string DestinationCountry
+        private string DestinationCountry;
+        private decimal CustomsFee;
+        public string destinationCountry
         {
-            get { return destinationCountry; }
+            get { return DestinationCountry; }
             private set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    destinationCountry = value;
+                    DestinationCountry = value;
                 }
             }
         }
 
-        public decimal CustomsFee
+        public decimal customsFee
         {
-            get { return customsFee; }
+            get { return CustomsFee; }
             private set
             {
                 if (value >= 0)
                 {
-                    customsFee = value;
+                    CustomsFee = value;
                 }
             }
         }
@@ -36,29 +36,28 @@ namespace OOP_Assignment
         {
             get
             {
-                return DeliveryFee + (Weight * 5) + customsFee;
+                return DeliveryFee + (Weight * 5) + CustomsFee;
             }
         }
 
-        public InternationalShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, string DestinationCountry, decimal CustomsFee) : base(trackingCode, description, weight, deliveryFee, destination)
+        public InternationalShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, string destinationCountry, decimal customsFee) : base(trackingCode, description, weight, deliveryFee, destination)
         {
             DestinationCountry = destinationCountry;
             CustomsFee = customsFee;
         }
 
+        public InternationalShipment()
+        {
+        }
+
         public override void PrintShipment()
         {
             Console.WriteLine($"Name Shipment: InternationalShipment");
-            Console.WriteLine(" \n ");
-            Console.WriteLine($"TrackingCode: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} KG");
-            Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");         
+            Console.WriteLine("\n");
+            Console.WriteLine($"TrackingCode: {TrackingCode}");      
             Console.WriteLine($"Destination Country: {destinationCountry}");
-            Console.WriteLine($"CustomsFee: {customsFee} EGP");
             Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
+            Console.WriteLine("==========================================");
         }
         public virtual void GenerateCustomsReport()
         {

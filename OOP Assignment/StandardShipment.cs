@@ -6,6 +6,10 @@ namespace OOP_Assignment
 {
     internal class StandardShipment : Shipment , ITrackable, IInsurable
     {
+        public StandardShipment()
+        {
+        }
+
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination)
         {
 
@@ -20,7 +24,8 @@ namespace OOP_Assignment
 
         public decimal CalculateInsurance()
         {
-            return EstimatedCost * 0.05m ;
+            return EstimatedCost * 0.05m;
+      
         }
 
         public string GetTrackingStatus()
@@ -32,13 +37,10 @@ namespace OOP_Assignment
         {
             {
                 Console.WriteLine($"Name Shipment: StandardShipment");
-                Console.WriteLine(" \n ");
+                Console.WriteLine("\n");
                 Console.WriteLine($"TrackingCode: {TrackingCode}");
                 Console.WriteLine($"Description: {Description}");
-                Console.WriteLine($"Weight: {Weight} KG");
-                Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");
                 Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
-                Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
                 Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
             }
         }

@@ -6,15 +6,15 @@ namespace OOP_Assignment
 {
     internal class ExpressShipment : Shipment , ITrackable, IInsurable
     {
-        private decimal extraFee;
-        public decimal ExtraFee
+        private decimal ExtraFee;
+        public decimal extraFee
         {
-            get { return extraFee; }
+            get { return ExtraFee; }
             set
             {
                 if (value >= 0)
                 {
-                    extraFee = value;
+                    ExtraFee = value;
                 }
             }
         }
@@ -22,25 +22,25 @@ namespace OOP_Assignment
         {
             get
             {
-                return DeliveryFee + (Weight * 5) + extraFee;
+                return DeliveryFee + (Weight * 5) + ExtraFee;
             }
         }
-        public ExpressShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, decimal ExtraFee) : base(trackingCode, description, weight, deliveryFee, destination)
+        public ExpressShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, decimal extraFee) : base(trackingCode, description, weight, deliveryFee, destination)
         {
             ExtraFee = extraFee;
+        }
+
+        public ExpressShipment()
+        {
         }
 
         public override void PrintShipment()
         {
             Console.WriteLine($"Name Shipment: ExpressShipment");
-            Console.WriteLine(" \n ");
+            Console.WriteLine("\n");
             Console.WriteLine($"TrackingCode: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} KG");
-            Console.WriteLine($"DeliveryFee: {DeliveryFee} EGP");
             Console.WriteLine($"ExtraFee: {extraFee} EGP");
             Console.WriteLine($"EstimatedCost: {EstimatedCost} EGP");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
 

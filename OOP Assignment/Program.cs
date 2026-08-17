@@ -686,6 +686,136 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 
 // Part 02 — Practical
+#region 8 Main() Checklist
+DliveryCenter Center = new DliveryCenter();
+StandardShipment Standard;
+ExpressShipment Express;
+InternationalShipment International;
+#region Standard Shipment
+{
+    Console.WriteLine("Enter Standard Shipment Data\n");
+Console.Write("Enter TrackingCode: ");
+string trackingCode = Console.ReadLine();
 
+Console.Write("Enter Description: ");
+string description = Console.ReadLine();
 
+Console.Write("Enter Weight: ");
+decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+Console.Write("Enter DeliveryFee:");
+decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+Console.WriteLine("Enter the shipment delivery address.");
+Console.Write("Enter the City Name: ");
+string City = Console.ReadLine();
+Console.Write("Enter the Street Name: ");
+string street = Console.ReadLine();
+Console.Write("Enter the BuildingNumber Name: ");
+int.TryParse(Console.ReadLine(), out int buildingNumber);
+Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
+Center.AddShipment(Standard);}
+#endregion
+
+#region Express Shipment
+{
+    Console.WriteLine("- - - - - - - - -  Express Shipment - - - - - - - - - - ");
+    Console.WriteLine("Enter Express Shipment Data");
+    Console.Write("Enter TrackingCode: ");
+    string trackingCode = Console.ReadLine();
+
+    Console.Write("Enter Description: ");
+    string description = Console.ReadLine();
+
+    Console.Write("Enter Weight: ");
+    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+    Console.Write("Enter DeliveryFee:");
+    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+    Console.Write("Enter ExtraFee:");
+    decimal.TryParse(Console.ReadLine(), out decimal extraFee);
+
+    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+    Console.WriteLine("Enter the shipment delivery address.");
+    Console.Write("Enter the City Name: ");
+    string City = Console.ReadLine();
+    Console.Write("Enter the Street Name: ");
+    string street = Console.ReadLine();
+    Console.Write("Enter the BuildingNumber Name: ");
+    int.TryParse(Console.ReadLine(), out int buildingNumber);
+   Express = new ExpressShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), extraFee);
+    Center.AddShipment(Express);
+}
+#endregion
+
+#region International Shipment
+{
+    Console.WriteLine("- - - - - - - - -  International Shipment - - - - - - - - - - ");
+    Console.WriteLine("Enter International Shipment Data");
+    Console.Write("Enter TrackingCode: ");
+    string trackingCode = Console.ReadLine();
+
+    Console.Write("Enter Description: ");
+    string description = Console.ReadLine();
+
+    Console.Write("Enter Weight: ");
+    decimal.TryParse(Console.ReadLine(), out decimal weight);
+
+    Console.Write("Enter DeliveryFee:");
+    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+
+    Console.Write("Enter Destination country: ");
+    string destinationCountry = Console.ReadLine();
+
+    Console.Write("Enter CustomsFee:");
+    decimal.TryParse(Console.ReadLine(), out decimal customsFee);
+
+    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+    Console.WriteLine("Enter the shipment delivery address.");
+    Console.Write("Enter the City Name: ");
+    string City = Console.ReadLine();
+    Console.Write("Enter the Street Name: ");
+    string street = Console.ReadLine();
+    Console.Write("Enter the BuildingNumber Name: ");
+    int.TryParse(Console.ReadLine(), out int buildingNumber);
+
+    International = new InternationalShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), destinationCountry, customsFee);
+    Center.AddShipment(International);
+
+}
+#endregion
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("====================\n Dlivery Center \n ====================");
+Center.PrintAllShipments();
+ITrackable[] iTrackable =
+{
+    Standard,
+    Express,
+    International
+};
+Console.WriteLine("==========================================");
+Console.WriteLine("Tracking Status");
+foreach (var trackable in iTrackable)
+{
+    Console.WriteLine($"{trackable.GetTrackingStatus()}");
+}
+IInsurable[] iInsurable =
+{
+    Standard,
+    Express,
+    International
+};
+Console.WriteLine("==========================================");
+Console.WriteLine("Insurance");
+
+foreach (var Insurable in iInsurable)
+{
+    Console.WriteLine($"{Insurable.GetType().Name} Insurance: {Insurable.CalculateInsurance()} EGP\n ");
+}
+Console.WriteLine("==========================================");
+Console.WriteLine("Interface Polymorphism Demonstrated Successfully.");
+#endregion
 #endregion
