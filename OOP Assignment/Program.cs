@@ -841,5 +841,24 @@ Center.AddShipment(Standard);}
 // و عند نسخ reference  لا يتم انشاء Object جديد بل الreference التاني بيشاور على نفس ال Object اللي ال reference الاول بيشاور عليه 
 
 #endregion
+
+#region Q2 Shallow Copy vs Deep Copy
+
+//a) What is a Shallow Copy?
+//ال Shallow Copy بينشئ Object جديد تماما وبينسخ البينات من نوع ال valueType fields ويكون الا ال Objects_2 منفصلين تماما ما عادا لو فيه nested objects  ف بيششاورو على نفس الObject بتاع ال nested objects
+
+//b) What is a Deep Copy?
+// ال Deep Copy بينشئ Object جديد منفصل تمام وبينسخ جميع البينات و جميع ال nested objects ويكونو منفصلين 
+
+//c) What happens to reference-type members when a Shallow Copy is created?
+// لما بعمل Shallow Copy ال reference-type بتفضل مشاوره على  الاوبجيكت الاصلي 
+
+//d) What happens to reference-type members when a Deep Copy is created?
+// لما بعمل Deep Copy بيتم انشاء Object جديد لل reference-type وتكون منفصله 
+
+//e) Give one situation where Deep Copy would be safer than Shallow Copy.
+// ال Deep Copy بيكون امان لما  تكون عايز تعدل على ال Object المنسوخ من غير م تأثر على ال Object الاصلي ف حالة ان ال Object الاصلي عنده nested objects
+
+#endregion
 #endregion
 #endregion
