@@ -876,5 +876,22 @@ using System.Reflection.Metadata.Ecma335;
 // ال static class هو  class  نوعه static  وكل ال members اللي فيه نوعهم static ومينفعش تنشئ منه object
 
 #endregion
+
+#region Q4 Extension Methods
+
+//a) What is an Extension Method?
+// ال Extension Method هيا Method بتسمحلي اضيف وظائف جديده منطقيه ل ال Types من غير م اعدل ف ال Class الاصليه 
+
+//b) What keyword must be used in the first parameter of an extension method?
+// الكلمه هيا this وهيا بستخدمها ف اول براماتر و this هيا  اللي بتحدد ان ال method هتكون Extension Method ل type معين 
+
+//c) Where must an extension method be declared?
+// بيتم تعريفها داخل Static Class وتكون ال method برضو Static
+
+//d) Can an extension method access private members of the class it extends ? 
+// Extension Method مينفعش توصل او تستخدم  private members او protected اللي تبع ال Type  اللي بتعمله ال Extension Method لأن ال Extension Method مش جزء حقيقي من ال Class الاصلي 
+
+#endregion
+
 #endregion
 #endregion
