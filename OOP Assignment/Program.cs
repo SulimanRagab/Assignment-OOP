@@ -827,5 +827,19 @@ Center.AddShipment(Standard);}
 #endregion
 
 #region ASSIGNMENT 05
+#region Part 01 — Theoretical Questions
+#region Q1 Object Copying
 
+//a) What happens when you assign one object variable to another object variable?
+// لا يتم انشاء Object جديد بل الreference التاني بيشاور على نفس ال Object اللي ال reference الاول بيشاور عليه 
+
+//b) Does assigning one object to another create a new object? Explain.
+// No ... لا يتم انشاء Object جديد بل الreference التاني بيشاور على نفس ال Object اللي ال reference الاول بيشاور عليه
+
+//c) What is the difference between copying an object and copying its reference?
+// عند نسخ Object بيتم انشاء Object بنفس ال  البينات تماما بس منفصليين يعني لو غيرت ف ال Object التاني الاول م بيتأثرش 
+// و عند نسخ reference  لا يتم انشاء Object جديد بل الreference التاني بيشاور على نفس ال Object اللي ال reference الاول بيشاور عليه 
+
+#endregion
+#endregion
 #endregion
