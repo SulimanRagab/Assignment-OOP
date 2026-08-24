@@ -695,99 +695,99 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 
 #region Standard Shipment
-{
-    Console.WriteLine("Enter Standard Shipment Data\n");
-Console.Write("Enter TrackingCode: ");
-string trackingCode = Console.ReadLine();
+//{
+//    Console.WriteLine("Enter Standard Shipment Data\n");
+//Console.Write("Enter TrackingCode: ");
+//string trackingCode = Console.ReadLine();
 
-Console.Write("Enter Description: ");
-string description = Console.ReadLine();
+//Console.Write("Enter Description: ");
+//string description = Console.ReadLine();
 
-Console.Write("Enter Weight: ");
-decimal.TryParse(Console.ReadLine(), out decimal weight);
+//Console.Write("Enter Weight: ");
+//decimal.TryParse(Console.ReadLine(), out decimal weight);
 
-Console.Write("Enter DeliveryFee:");
-decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+//Console.Write("Enter DeliveryFee:");
+//decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
 
-Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
-Console.WriteLine("Enter the shipment delivery address.");
-Console.Write("Enter the City Name: ");
-string City = Console.ReadLine();
-Console.Write("Enter the Street Name: ");
-string street = Console.ReadLine();
-Console.Write("Enter the BuildingNumber Name: ");
-int.TryParse(Console.ReadLine(), out int buildingNumber);
-Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
-Center.AddShipment(Standard);}
+//Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//Console.WriteLine("Enter the shipment delivery address.");
+//Console.Write("Enter the City Name: ");
+//string City = Console.ReadLine();
+//Console.Write("Enter the Street Name: ");
+//string street = Console.ReadLine();
+//Console.Write("Enter the BuildingNumber Name: ");
+//int.TryParse(Console.ReadLine(), out int buildingNumber);
+//Standard = new StandardShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber));
+//Center.AddShipment(Standard);}
 #endregion
 
 #region Express Shipment
-{
-    Console.WriteLine("- - - - - - - - -  Express Shipment - - - - - - - - - - ");
-    Console.WriteLine("Enter Express Shipment Data");
-    Console.Write("Enter TrackingCode: ");
-    string trackingCode = Console.ReadLine();
+//{
+//    Console.WriteLine("- - - - - - - - -  Express Shipment - - - - - - - - - - ");
+//    Console.WriteLine("Enter Express Shipment Data");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
 
-    Console.Write("Enter Description: ");
-    string description = Console.ReadLine();
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
 
-    Console.Write("Enter Weight: ");
-    decimal.TryParse(Console.ReadLine(), out decimal weight);
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
 
-    Console.Write("Enter DeliveryFee:");
-    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
 
-    Console.Write("Enter ExtraFee:");
-    decimal.TryParse(Console.ReadLine(), out decimal extraFee);
+//    Console.Write("Enter ExtraFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal extraFee);
 
-    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
-    Console.WriteLine("Enter the shipment delivery address.");
-    Console.Write("Enter the City Name: ");
-    string City = Console.ReadLine();
-    Console.Write("Enter the Street Name: ");
-    string street = Console.ReadLine();
-    Console.Write("Enter the BuildingNumber Name: ");
-    int.TryParse(Console.ReadLine(), out int buildingNumber);
-   Express = new ExpressShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), extraFee);
-    Center.AddShipment(Express);
-}
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
+//   Express = new ExpressShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), extraFee);
+//    Center.AddShipment(Express);
+//}
 #endregion
 
 #region International Shipment
-{
-    Console.WriteLine("- - - - - - - - -  International Shipment - - - - - - - - - - ");
-    Console.WriteLine("Enter International Shipment Data");
-    Console.Write("Enter TrackingCode: ");
-    string trackingCode = Console.ReadLine();
+//{
+//    Console.WriteLine("- - - - - - - - -  International Shipment - - - - - - - - - - ");
+//    Console.WriteLine("Enter International Shipment Data");
+//    Console.Write("Enter TrackingCode: ");
+//    string trackingCode = Console.ReadLine();
 
-    Console.Write("Enter Description: ");
-    string description = Console.ReadLine();
+//    Console.Write("Enter Description: ");
+//    string description = Console.ReadLine();
 
-    Console.Write("Enter Weight: ");
-    decimal.TryParse(Console.ReadLine(), out decimal weight);
+//    Console.Write("Enter Weight: ");
+//    decimal.TryParse(Console.ReadLine(), out decimal weight);
 
-    Console.Write("Enter DeliveryFee:");
-    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
+//    Console.Write("Enter DeliveryFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal deliveryFee);
 
-    Console.Write("Enter Destination country: ");
-    string destinationCountry = Console.ReadLine();
+//    Console.Write("Enter Destination country: ");
+//    string destinationCountry = Console.ReadLine();
 
-    Console.Write("Enter CustomsFee:");
-    decimal.TryParse(Console.ReadLine(), out decimal customsFee);
+//    Console.Write("Enter CustomsFee:");
+//    decimal.TryParse(Console.ReadLine(), out decimal customsFee);
 
-    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
-    Console.WriteLine("Enter the shipment delivery address.");
-    Console.Write("Enter the City Name: ");
-    string City = Console.ReadLine();
-    Console.Write("Enter the Street Name: ");
-    string street = Console.ReadLine();
-    Console.Write("Enter the BuildingNumber Name: ");
-    int.TryParse(Console.ReadLine(), out int buildingNumber);
+//    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - -  - - - ");
+//    Console.WriteLine("Enter the shipment delivery address.");
+//    Console.Write("Enter the City Name: ");
+//    string City = Console.ReadLine();
+//    Console.Write("Enter the Street Name: ");
+//    string street = Console.ReadLine();
+//    Console.Write("Enter the BuildingNumber Name: ");
+//    int.TryParse(Console.ReadLine(), out int buildingNumber);
 
-    International = new InternationalShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), destinationCountry, customsFee);
-    Center.AddShipment(International);
+//    International = new InternationalShipment(trackingCode, description, weight, deliveryFee, new DeliveryAddress(City, street, buildingNumber), destinationCountry, customsFee);
+//    Center.AddShipment(International);
+//}
 
-}
 #endregion
 
 #region Output
@@ -858,6 +858,22 @@ Center.AddShipment(Standard);}
 
 //e) Give one situation where Deep Copy would be safer than Shallow Copy.
 // ال Deep Copy بيكون امان لما  تكون عايز تعدل على ال Object المنسوخ من غير م تأثر على ال Object الاصلي ف حالة ان ال Object الاصلي عنده nested objects
+
+#endregion
+
+#region Q3 Static Members
+
+//a) What is a static field, and how is it different from an instance field?
+// ال Static بينتمي لل class فقط ولا ينتمي لأي object ويمكن لكل object استخدامه ولا يقتصر ل object معين ويتم استدعائه من خلال ال class وليس من خلال انشاء object
+
+//b) What is a static method? Can a static method directly access instance members?
+// لأ No مينفعش ال static method توصل لل instance members لأن ال instance members مرتبط ب اوبجيكت خاص و ال static methodما بيرتبطش ب objectمعين 
+
+//c) What is a static constructor, and when is it executed?
+// ال Static Constructor هو Constructor بيتنفذ تلقائيا وبيتفذ مره واحده وقبل اي Static موجود ف ال class
+
+//d) What is a static class? Can you create an object from a static class?
+// ال static class هو  class  نوعه static  وكل ال members اللي فيه نوعهم static ومينفعش تنشئ منه object
 
 #endregion
 #endregion
