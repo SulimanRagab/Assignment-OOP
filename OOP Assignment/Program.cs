@@ -825,3 +825,7 @@ Center.AddShipment(Standard);}
 
 #endregion
 #endregion
+
+#region ASSIGNMENT 05
+
+#endregion
