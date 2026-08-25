@@ -893,5 +893,21 @@ using System.Reflection.Metadata.Ecma335;
 
 #endregion
 
+#region Q5 Partial Classes and Partial Methods
+
+//a) What is a Partial Class?
+// ال partial بتسمحلي اني اقسم ال Class الى اجزاء يعني اقدر اخلي ال class للميثود وكلاس للبروبيرتس وهكذا و الكومبيلر بيدمجهم ف ملف واحد ف الاخر 
+
+//b) Why would a developer split one class into multiple files?
+// لتقليل تكدس الكود  وتنظيم ال clss  الى انواع  وسهولة تعديل الكود فيما بعد 
+
+//c) What is a Partial Method?
+// ال Partial Method  بتسمحلي اني انشئ ميثود ف كلاس البيرشال ومن غير م اعملو implementation و انفذه ف كلاس تانيه Partial 
+
+//d) What happens if a declared partial method has no implementation?
+// هيعطي Error وتفاصيله اني لازمه اعمل لل ميثود implementation ف الكلاس اللي انشئت فيه  او كلاس Partial تانيه 
+
+#endregion
+
 #endregion
 #endregion
