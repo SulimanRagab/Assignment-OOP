@@ -827,6 +827,7 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 
 #region ASSIGNMENT 05
+
 #region Part 01 — Theoretical Questions
 #region Q1 Object Copying
 
@@ -910,4 +911,6 @@ using System.Reflection.Metadata.Ecma335;
 #endregion
 
 #endregion
+
+//Part 02 — Practical
 #endregion
