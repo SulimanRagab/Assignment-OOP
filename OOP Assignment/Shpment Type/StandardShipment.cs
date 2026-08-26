@@ -23,11 +23,14 @@ namespace OOP_Assignment
             }
         }
 
+
         public decimal CalculateInsurance()
         {
             return EstimatedCost * 0.05m;
       
         }
+
+        public override Shipment CopyShipment() => new StandardShipment();
 
         public string GetTrackingStatus()
         {
@@ -45,5 +48,7 @@ namespace OOP_Assignment
                 Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
             }
         }
+
+        public override StandardShipment ShallowCopy() => (StandardShipment)this.MemberwiseClone();
     }
 }

@@ -912,5 +912,39 @@ using System.Reflection.Metadata.Ecma335;
 
 #endregion
 
-//Part 02 — Practical
+#region Part 02 — Practical
+
+#region 1 Object Copying
+//StandardShipment Shipment1 = new StandardShipment();
+//Shipment1.trackingCode = "100";
+//StandardShipment Shipment2 = Shipment1;
+//Shipment2.trackingCode = "200";
+//Console.WriteLine(Shipment1.trackingCode);
+//Console.WriteLine(Shipment2.trackingCode);
+
+//StandardShipment Shipment1 = new StandardShipment();
+//Shipment1.trackingCode = "100";
+//StandardShipment Shipment2 = (StandardShipment)Shipment1.CopyShipment();
+//Shipment2.trackingCode = "200";
+//Console.WriteLine(Shipment1.trackingCode);
+//Console.WriteLine(Shipment2.trackingCode); 
+
+#endregion
+
+#region 2 Shallow Copy
+//StandardShipment Shipment1 = new StandardShipment();
+//Shipment1.trackingCode = "100";
+//Shipment1.Destination = new DeliveryAddress("Cairoo");
+//StandardShipment Shipment2 = Shipment1.ShallowCopy();
+//Shipment2.trackingCode = "200";
+//Shipment1.Destination = new DeliveryAddress("Giza");
+//Console.WriteLine(Shipment1.trackingCode);
+//Console.WriteLine(Shipment2.trackingCode);
+//Console.WriteLine(Shipment1.Destination.City);
+//Console.WriteLine(Shipment2.Destination.City);
+// Shipment1 و Shipment2 بقو نسختين  منفصلتين مع اختلاف البينات  بسبب استخدام ميثود ShallowCopy() ولكن ما زالو بيشاور على نفس ال  object بتاع ال DeliveryAddress 
+#endregion
+
+
+#endregion
 #endregion

@@ -10,6 +10,10 @@ namespace OOP_Assignment
         public string Street;
         public int BuildingNumber;
 
+        public DeliveryAddress(string city)
+        {
+            City = city;
+        }
         public DeliveryAddress(string city, string street, int buildingNumber)
         {
             City = city;

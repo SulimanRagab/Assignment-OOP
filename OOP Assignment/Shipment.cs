@@ -7,7 +7,7 @@ namespace OOP_Assignment
     internal abstract class Shipment
     {
         #region fields
-        private string trackingCode;
+        public string trackingCode;
         private string description;
         private decimal weight;
         private decimal deliveryFee;
@@ -96,6 +96,10 @@ public string TrackingCode
         #endregion
 
         #region Methods
+        public abstract Shipment CopyShipment();
+        public abstract Shipment ShallowCopy();
+
+
         public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)

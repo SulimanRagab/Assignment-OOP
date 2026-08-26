@@ -74,6 +74,16 @@ namespace OOP_Assignment
         {
             return EstimatedCost * 0.12m;
         }
+
+        public override Shipment CopyShipment()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Shipment ShallowCopy()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
