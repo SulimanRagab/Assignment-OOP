@@ -31,6 +31,18 @@ namespace OOP_Assignment
         }
 
         public override Shipment CopyShipment() => new StandardShipment();
+        public override StandardShipment ShallowCopy() => (StandardShipment)this.MemberwiseClone();
+        public override Shipment DeepCopy()
+        {
+            return new StandardShipment()
+            {
+                trackingCode = this.trackingCode,
+                Destination = new DeliveryAddress
+                {
+                  City = this.Destination.City,
+                }
+            };
+        }
 
         public string GetTrackingStatus()
         {
@@ -49,6 +61,6 @@ namespace OOP_Assignment
             }
         }
 
-        public override StandardShipment ShallowCopy() => (StandardShipment)this.MemberwiseClone();
+        
     }
 }

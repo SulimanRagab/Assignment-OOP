@@ -98,6 +98,7 @@ public string TrackingCode
         #region Methods
         public abstract Shipment CopyShipment();
         public abstract Shipment ShallowCopy();
+        public abstract Shipment DeepCopy();
 
 
         public void UpdateDeliveryFee(decimal newFee)

@@ -84,6 +84,11 @@ namespace OOP_Assignment
         {
             throw new NotImplementedException();
         }
+
+        public override Shipment DeepCopy()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

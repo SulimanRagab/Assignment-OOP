@@ -945,6 +945,19 @@ using System.Reflection.Metadata.Ecma335;
 // Shipment1 و Shipment2 بقو نسختين  منفصلتين مع اختلاف البينات  بسبب استخدام ميثود ShallowCopy() ولكن ما زالو بيشاور على نفس ال  object بتاع ال DeliveryAddress 
 #endregion
 
+#region 3 Deep Copy
+//StandardShipment Shipment1 = new StandardShipment();
+//Shipment1.trackingCode = "100";
+//Shipment1.Destination = new DeliveryAddress("Cairoo");
+//StandardShipment Shipment2 = (StandardShipment)Shipment1.DeepCopy();
+//Shipment2.trackingCode = "200";
+//Shipment2.Destination = new DeliveryAddress("Giza");
+//Console.WriteLine(Shipment1.trackingCode);
+//Console.WriteLine(Shipment2.trackingCode);
+//Console.WriteLine(Shipment1.Destination.City);
+//Console.WriteLine(Shipment2.Destination.City);
+//Console.WriteLine(Shipment1.Equals(Shipment2));// False 
+#endregion
 
 #endregion
 #endregion
