@@ -9,6 +9,7 @@ namespace OOP_Assignment
     {
         public StandardShipment()
         {
+            TotalShipmentsCreated++;
         }
 
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination)

@@ -12,6 +12,7 @@ namespace OOP_Assignment
         private decimal weight;
         private decimal deliveryFee;
         public DeliveryAddress Destination { get; set; }
+        public static int TotalShipmentsCreated = 0;
         #endregion
 
         #region properties

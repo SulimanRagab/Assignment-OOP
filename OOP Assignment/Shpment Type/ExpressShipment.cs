@@ -33,6 +33,7 @@ namespace OOP_Assignment
 
         public ExpressShipment()
         {
+            TotalShipmentsCreated++;
         }
 
         public override void PrintShipment()

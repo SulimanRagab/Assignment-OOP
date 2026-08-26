@@ -959,5 +959,18 @@ using System.Reflection.Metadata.Ecma335;
 //Console.WriteLine(Shipment1.Equals(Shipment2));// False 
 #endregion
 
+#region 4 Static Field
+//StandardShipment StandardShipment1 = new StandardShipment();
+//StandardShipment StandardShipment2 = new StandardShipment();
+//StandardShipment StandardShipment3 = new StandardShipment();
+//StandardShipment StandardShipment4 = new StandardShipment();
+//Console.WriteLine(Shipment.TotalShipmentsCreated);
+// تجربة نوع شحنه اخر ExpressShipment
+//ExpressShipment ExpressShipment1 = new ExpressShipment();
+//ExpressShipment ExpressShipment2 = new ExpressShipment();
+//ExpressShipment ExpressShipment3 = new ExpressShipment();
+//Console.WriteLine(Shipment.TotalShipmentsCreated); 
+#endregion
+
 #endregion
 #endregion
