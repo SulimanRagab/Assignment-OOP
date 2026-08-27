@@ -106,6 +106,8 @@ public string TrackingCode
         public abstract Shipment ShallowCopy();
         public abstract Shipment DeepCopy();
         public static int GetTotalShipmentsCreated() => TotalShipmentsCreated;
+        public abstract string GetSummary();
+        public abstract string GetTrackingStatus();
 
 
         public void UpdateDeliveryFee(decimal newFee)

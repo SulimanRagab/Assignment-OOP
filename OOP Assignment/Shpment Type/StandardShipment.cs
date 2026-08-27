@@ -7,7 +7,7 @@ namespace OOP_Assignment
 {
     internal class StandardShipment : Shipment , ITrackable, IInsurable
     {
-     
+        public string ShipmentType = "Standard";
         public StandardShipment()
         {
             TotalShipmentsCreated++;
@@ -46,11 +46,14 @@ namespace OOP_Assignment
                 }
             };
         }
-        public string GetTrackingStatus()
+        public override string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is Ready";
         }
-
+        public override string GetSummary()
+        {
+            return $"{trackingCode} | {ShipmentType} | {Weight} KG | {GetTrackingStatus()} ";
+        }
         public override void PrintShipment()
         {
             {
@@ -63,6 +66,6 @@ namespace OOP_Assignment
             }
         }
 
-        
+
     }
 }

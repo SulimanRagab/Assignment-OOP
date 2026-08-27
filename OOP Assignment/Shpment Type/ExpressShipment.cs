@@ -8,6 +8,7 @@ namespace OOP_Assignment
     internal class ExpressShipment : Shipment , ITrackable, IInsurable
     {
         private decimal ExtraFee;
+        public string ShipmentType = "Express";
         public decimal extraFee
         {
             get { return ExtraFee; }
@@ -47,7 +48,7 @@ namespace OOP_Assignment
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - ");
         }
 
-        public string GetTrackingStatus()
+        public override string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode}  is Out for Delivery";
         }
@@ -70,6 +71,11 @@ namespace OOP_Assignment
         public override Shipment DeepCopy()
         {
             throw new NotImplementedException();
+        }
+
+        public override string GetSummary()
+        {
+            return $"{trackingCode} | {ShipmentType} | {Weight} KG | {GetTrackingStatus()} ";
         }
     }
 }

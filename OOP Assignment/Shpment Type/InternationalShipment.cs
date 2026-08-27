@@ -9,6 +9,7 @@ namespace OOP_Assignment
     {
         private string DestinationCountry;
         private decimal CustomsFee;
+        public string ShipmentType = "International";
         public string destinationCountry
         {
             get { return DestinationCountry; }
@@ -47,7 +48,9 @@ namespace OOP_Assignment
             CustomsFee = customsFee;
         }
 
-
+        public InternationalShipment()
+        {
+        }
 
         public override void PrintShipment()
         {
@@ -63,7 +66,7 @@ namespace OOP_Assignment
             Console.WriteLine("GenerateCustomsReport virtual ");
         }
 
-        public string GetTrackingStatus()
+        public override string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} has been Delivered";
         }
@@ -86,6 +89,11 @@ namespace OOP_Assignment
         public override Shipment DeepCopy()
         {
             throw new NotImplementedException();
+        }
+
+        public override string GetSummary()
+        {
+            return $"{trackingCode} | {ShipmentType} | {Weight} KG | {GetTrackingStatus()} ";
         }
     }
 }

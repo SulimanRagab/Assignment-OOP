@@ -992,6 +992,18 @@ using System.Reflection.Metadata.Ecma335;
 //DeliveryUtilities.PrintSeparator();
 #endregion
 
+#region 8 Extension Methods
+//StandardShipment Shipment1 = new StandardShipment();
+//InternationalShipment Shipment2 = new InternationalShipment();
+//Shipment1.trackingCode = "100";
+//Shipment1.Weight = 3;
+//Shipment2.trackingCode = "200";
+//Shipment2.Weight = 6;
+//Console.WriteLine(Shipment1.GetSummary());
+//Console.WriteLine(Shipment1.IsDelivered());
+//Console.WriteLine(Shipment2.GetSummary());
+//Console.WriteLine(Shipment2.IsDelivered());
+#endregion
 
 #endregion
 #endregion
