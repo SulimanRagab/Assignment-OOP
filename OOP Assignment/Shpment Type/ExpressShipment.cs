@@ -31,9 +31,10 @@ namespace OOP_Assignment
             ExtraFee = extraFee;
         }
 
-        public ExpressShipment()
+        static ExpressShipment()
         {
             TotalShipmentsCreated++;
+
         }
 
         public override void PrintShipment()

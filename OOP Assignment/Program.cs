@@ -969,7 +969,12 @@ using System.Reflection.Metadata.Ecma335;
 //ExpressShipment ExpressShipment1 = new ExpressShipment();
 //ExpressShipment ExpressShipment2 = new ExpressShipment();
 //ExpressShipment ExpressShipment3 = new ExpressShipment();
-//Console.WriteLine(Shipment.TotalShipmentsCreated); 
+//Console.WriteLine(Shipment.TotalShipmentsCreated);
+#endregion
+
+#region 5 Static Constructor
+//StandardShipment Stan dardShipment1 = new StandardShipment();
+//Console.WriteLine(Shipment.TotalShipmentsCreated); // Shipment System Initialized   0
 #endregion
 
 #endregion

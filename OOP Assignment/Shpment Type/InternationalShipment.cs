@@ -47,9 +47,7 @@ namespace OOP_Assignment
             CustomsFee = customsFee;
         }
 
-        public InternationalShipment()
-        {
-        }
+
 
         public override void PrintShipment()
         {

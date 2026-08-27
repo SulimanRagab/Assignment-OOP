@@ -12,7 +12,7 @@ namespace OOP_Assignment
         private decimal weight;
         private decimal deliveryFee;
         public DeliveryAddress Destination { get; set; }
-        public static int TotalShipmentsCreated = 0;
+        public static int TotalShipmentsCreated;
         #endregion
 
         #region properties
@@ -69,7 +69,12 @@ public string TrackingCode
         #endregion
 
         #region Constructors
-        public Shipment()
+        static Shipment()
+        {
+          TotalShipmentsCreated = 0;
+          Console.WriteLine("Shipment System Initialized");
+        }
+        protected Shipment()
         {
             
         }

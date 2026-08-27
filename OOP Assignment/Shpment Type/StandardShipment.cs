@@ -7,15 +7,17 @@ namespace OOP_Assignment
 {
     internal class StandardShipment : Shipment , ITrackable, IInsurable
     {
+     
         public StandardShipment()
         {
-            TotalShipmentsCreated++;
+
         }
 
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination)
         {
 
         }
+
         public override decimal EstimatedCost
         {
             get
@@ -40,7 +42,7 @@ namespace OOP_Assignment
                 trackingCode = this.trackingCode,
                 Destination = new DeliveryAddress
                 {
-                  City = this.Destination.City,
+                    City = this.Destination.City,
                 }
             };
         }
