@@ -977,5 +977,13 @@ using System.Reflection.Metadata.Ecma335;
 //Console.WriteLine(Shipment.TotalShipmentsCreated); // Shipment System Initialized   0
 #endregion
 
+#region 6 Static Method
+
+//StandardShipment StandardShipment1 = new StandardShipment();
+//StandardShipment StandardShipment2 = new StandardShipment();
+//StandardShipment StandardShipment3 = new StandardShipment();
+//StandardShipment StandardShipment4 = new StandardShipment();
+//Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+#endregion
 #endregion
 #endregion

@@ -12,7 +12,7 @@ namespace OOP_Assignment
         private decimal weight;
         private decimal deliveryFee;
         public DeliveryAddress Destination { get; set; }
-        public static int TotalShipmentsCreated;
+        public static int TotalShipmentsCreated = 0;
         #endregion
 
         #region properties
@@ -69,11 +69,11 @@ public string TrackingCode
         #endregion
 
         #region Constructors
-        static Shipment()
-        {
-          TotalShipmentsCreated = 0;
-          Console.WriteLine("Shipment System Initialized");
-        }
+        //static Shipment()
+        //{
+        //  TotalShipmentsCreated = 0;
+        //  Console.WriteLine("Shipment System Initialized");
+        //}
         protected Shipment()
         {
             
@@ -105,6 +105,7 @@ public string TrackingCode
         public abstract Shipment CopyShipment();
         public abstract Shipment ShallowCopy();
         public abstract Shipment DeepCopy();
+        public static int GetTotalShipmentsCreated() => TotalShipmentsCreated;
 
 
         public void UpdateDeliveryFee(decimal newFee)
