@@ -985,5 +985,13 @@ using System.Reflection.Metadata.Ecma335;
 //StandardShipment StandardShipment4 = new StandardShipment();
 //Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
 #endregion
+
+#region 7 Static Class
+//DeliveryUtilities.PrintSeparator();
+//DeliveryUtilities.PrintSystemTitle();
+//DeliveryUtilities.PrintSeparator();
+#endregion
+
+
 #endregion
 #endregion
