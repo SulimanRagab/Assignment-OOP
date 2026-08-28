@@ -50,6 +50,7 @@ namespace OOP_Assignment
 
         public InternationalShipment()
         {
+            TotalShipmentsCreated++;
         }
 
         public override void PrintShipment()

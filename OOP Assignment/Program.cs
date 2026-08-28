@@ -5,6 +5,7 @@
 #region Question 1
 using OOP_Assignment;
 using System.Diagnostics.Metrics;
+using System.Linq.Expressions;
 using System.Reflection.Metadata.Ecma335;
 #region First Requirement
 
@@ -1011,5 +1012,101 @@ using System.Reflection.Metadata.Ecma335;
 //Shipment1.UpdateTrackingStatus("Delivery");
 #endregion
 
+#region 11 Main() Checklist
+
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Smart Delivery Management System");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine(" \n Shipment System Initialized\r\n");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Creating Shipments...");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Standard Shipment Created\r\n");
+Console.WriteLine("Express Shipment Created\r\n");
+Console.WriteLine("International Shipment Created\r\n");
+StandardShipment StandardShipment = new StandardShipment();
+ExpressShipment ExpressShipment = new ExpressShipment();
+InternationalShipment InternationalShipment = new InternationalShipment();
+Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Object Copying");
+DeliveryUtilities.PrintSeparator();
+StandardShipment Shipment1 = new StandardShipment();
+Shipment1.trackingCode = " SH002";
+StandardShipment Shipment2 = Shipment1;
+Shipment2.trackingCode = " SH001";
+Console.WriteLine($"Original Shipment: {Shipment1.trackingCode}");
+Console.WriteLine($"Assigned Shipment: {Shipment2.trackingCode}");
+Console.WriteLine($"Same Object : {Shipment1.Equals(Shipment2)}");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("\nShallow Copy\r\n");
+DeliveryUtilities.PrintSeparator();
+StandardShipment Shipment01 = new StandardShipment();
+Shipment01.Destination = new DeliveryAddress("Cairo");
+StandardShipment Shipment02 = (StandardShipment)Shipment01.ShallowCopy();
+Console.WriteLine($"Original Shipment Address :{Shipment01.Destination.City}");
+Console.WriteLine($"Copied Shipment Address :{Shipment02.Destination.City}");
+Console.WriteLine("\nChanging copied shipment address...\r\n");
+Shipment02.Destination = new DeliveryAddress("Giza");
+Console.WriteLine($"Original Shipment Address :{Shipment01.Destination.City}");
+Console.WriteLine($"Copied Shipment Address :{Shipment02.Destination.City}");
+Console.WriteLine($"Same DeliveryAddress Object : {Shipment01.Destination.Equals(Shipment02.Destination)}");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("\nDeep Copy\r\n");
+DeliveryUtilities.PrintSeparator();
+StandardShipment Shipmentdeep01 = new StandardShipment();
+Shipmentdeep01.Destination = new DeliveryAddress("Cairo");
+StandardShipment Shipmentdeep02 = (StandardShipment)Shipmentdeep01.ShallowCopy();
+Console.WriteLine($"Original Shipment Address :{Shipmentdeep01.Destination.City}");
+Console.WriteLine($"Copied Shipment Address :{Shipmentdeep02.Destination.City}");
+Console.WriteLine("\nChanging copied shipment address...\r\n");
+Shipmentdeep02.Destination = new DeliveryAddress("Giza");
+Console.WriteLine($"Original Shipment Address :{Shipmentdeep01.Destination.City}");
+Console.WriteLine($"Copied Shipment Address :{Shipmentdeep02.Destination.City}");
+Console.WriteLine($"Same DeliveryAddress Object : {Shipmentdeep01.Destination.Equals(Shipmentdeep02.Destination)}");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Extension Methods");
+DeliveryUtilities.PrintSeparator();
+
+StandardShipment Standard = new StandardShipment();
+ExpressShipment Express = new ExpressShipment();
+InternationalShipment International = new InternationalShipment();
+Standard.trackingCode = "SH001";
+Standard.Weight = 3;
+Express.trackingCode = "SH002";
+Express.Weight = 6;
+International.trackingCode = "SH003";
+International.Weight = 8;
+Console.WriteLine(Standard.GetSummary());
+Console.WriteLine(Express.GetSummary());
+Console.WriteLine(International.GetSummary());
+Console.WriteLine($"SH001 Is Delivered :{Standard.IsDelivered()}");
+Console.WriteLine($"SH003 Is Delivered :{International.IsDelivered()}");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Tracking Status");
+DeliveryUtilities.PrintSeparator();
+StandardShipment TrackingStatus = new StandardShipment();
+TrackingStatus.UpdateTrackingStatus("Delivery");
+
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Static Utilities");
+DeliveryUtilities.PrintSeparator();
+
+DeliveryUtilities.PrintSeparator();
+DeliveryUtilities.PrintSystemTitle();
+DeliveryUtilities.PrintSeparator();
+ExpressShipment ExpressShipment1 = new ExpressShipment();
+ExpressShipment ExpressShipment2 = new ExpressShipment();
+ExpressShipment ExpressShipment3 = new ExpressShipment();
+Console.WriteLine(Shipment.TotalShipmentsCreated); // 9
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Partial Method");
+DeliveryUtilities.PrintSeparator();
+TrackingStatus.UpdateTrackingStatus("Delivery");
+DeliveryUtilities.PrintSeparator();
+Console.WriteLine("Assignment Completed");
+DeliveryUtilities.PrintSeparator();
+
+#endregion
 #endregion
 #endregion

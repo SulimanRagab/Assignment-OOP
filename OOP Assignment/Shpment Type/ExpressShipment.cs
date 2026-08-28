@@ -38,6 +38,10 @@ namespace OOP_Assignment
 
         }
 
+        public ExpressShipment()
+        {
+        }
+
         public override void PrintShipment()
         {
             Console.WriteLine($"Name Shipment: ExpressShipment");
