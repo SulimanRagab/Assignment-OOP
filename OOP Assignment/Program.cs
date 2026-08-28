@@ -999,10 +999,16 @@ using System.Reflection.Metadata.Ecma335;
 //Shipment1.Weight = 3;
 //Shipment2.trackingCode = "200";
 //Shipment2.Weight = 6;
+//Shipment1.UpdateTrackingStatus("Delivery");
 //Console.WriteLine(Shipment1.GetSummary());
 //Console.WriteLine(Shipment1.IsDelivered());
 //Console.WriteLine(Shipment2.GetSummary());
 //Console.WriteLine(Shipment2.IsDelivered());
+#endregion
+
+#region 10 Partial Method
+//StandardShipment Shipment1 = new StandardShipment();
+//Shipment1.UpdateTrackingStatus("Delivery");
 #endregion
 
 #endregion

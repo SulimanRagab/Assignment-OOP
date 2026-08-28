@@ -19,6 +19,9 @@ namespace OOP_Assignment
 
             }
         }
+
         public abstract string GetTrackingStatus();
+        public void UpdateTrackingStatus(string newStatus2) => OnTrackingStatusChanged(newStatus2);
+        public partial void OnTrackingStatusChanged(string newStatus);
     }
 }

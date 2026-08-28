@@ -94,7 +94,10 @@ namespace OOP_Assignment
         public abstract Shipment DeepCopy();
         public static int GetTotalShipmentsCreated() => TotalShipmentsCreated;
         public abstract string GetSummary();
- 
+        public partial void OnTrackingStatusChanged(string newStatus)
+        {
+            Console.WriteLine($"Tracking status changed to: {newStatus}");
+        }
 
 
         public void UpdateDeliveryFee(decimal newFee)

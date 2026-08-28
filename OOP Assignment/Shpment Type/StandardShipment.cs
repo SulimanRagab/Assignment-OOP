@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal class StandardShipment : Shipment , ITrackable, IInsurable
+    internal class StandardShipment : Shipment, ITrackable, IInsurable
     {
         public string ShipmentType = "Standard";
         public StandardShipment()
@@ -46,10 +46,6 @@ namespace OOP_Assignment
                 }
             };
         }
-        public override string GetTrackingStatus()
-        {
-            return $"Shipment {TrackingCode} is Ready";
-        }
         public override string GetSummary()
         {
             return $"{trackingCode} | {ShipmentType} | {Weight} KG | {GetTrackingStatus()} ";
@@ -66,6 +62,9 @@ namespace OOP_Assignment
             }
         }
 
-
+        public override string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Ready";
+        }
     }
 }
