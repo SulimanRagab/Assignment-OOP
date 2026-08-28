@@ -4,10 +4,9 @@ using System.Text;
 
 namespace OOP_Assignment
 {
-    internal abstract class Shipment
+    internal abstract partial class Shipment 
     {
         #region fields
-        public string trackingCode;
         private string description;
         private decimal weight;
         private decimal deliveryFee;
@@ -16,18 +15,6 @@ namespace OOP_Assignment
         #endregion
 
         #region properties
-public string TrackingCode
-        {
-            get { return trackingCode; }
-            private set 
-            {
-                if (!string.IsNullOrWhiteSpace(value))
-                {
-                  trackingCode = value;
-                }
-                
-            }
-        }
         public string Description
         {
             get { return description; }
@@ -69,11 +56,11 @@ public string TrackingCode
         #endregion
 
         #region Constructors
-        //static Shipment()
-        //{
-        //  TotalShipmentsCreated = 0;
-        //  Console.WriteLine("Shipment System Initialized");
-        //}
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
         protected Shipment()
         {
             
@@ -107,7 +94,7 @@ public string TrackingCode
         public abstract Shipment DeepCopy();
         public static int GetTotalShipmentsCreated() => TotalShipmentsCreated;
         public abstract string GetSummary();
-        public abstract string GetTrackingStatus();
+ 
 
 
         public void UpdateDeliveryFee(decimal newFee)
